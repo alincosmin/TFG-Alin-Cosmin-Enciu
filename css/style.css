@@ -1,0 +1,33 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body{
+    height: 100vh;
+    background-color: #191919;
+}
+
+li{
+    list-style: none;
+}
+
+.logo img{
+    width: 50px;
+}
+
+a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-size: 12pt;
+}
+
+a:hover{
+    color: #f9ca34;
+}
+
+a:active{
+    color: #f9ca34;
+}

@@ -15,11 +15,13 @@
         <div class="navbar">
             <div class="logo"><a href="/html/home.html"><img src="/img/logo-gris.png" alt=""></a></div>
             <ul class="enlaces">
-                <li class="inicio"><a href="/html/home.html">Inicio</a></li>
-                <li class="proyectos"><a href="/html/proyectos.html">Proyectos</a></li>
-                <li class="about"><a href="/html/about.html">Sobre mi</a></li>
+                <li class="inicio"><a href="#inicio">Inicio</a></li>
+                <li class="about"><a href="#about">Sobre mi</a></li>
+                <li class="about"><a href="#habilidades">Habilidades</a></li>
+                <li class="about"><a href="#servicios">Servicios</a></li>
+                <li class="proyectos"><a href="#proyectos">Proyectos</a></li>
             </ul>
-            <a href="/html/contacto.html" class="cotacto_btn">Contáctame</a>
+            <a href="#contacto" class="cotacto_btn">Contáctame</a>
             
 <!-- Creación de un botón para la versión móvil, solo aparecerá cuando la web este en mobile -->
             <div class="menu_btn">
@@ -29,10 +31,12 @@
 
 <!-- Menu móvil -->
         <div class="mobile_menu">
-            <li class="inicio"><a href="/html/home.html">Inicio</a></li>
-            <li class="proyectos"><a href="/html/proyectos.html">Proyectos</a></li>
-            <li class="about"><a href="/html/about.html">Sobre mi</a></li>
-            <li><a href="/html/contacto.html" class="cotacto_btn">Contáctame</a></li>  
+            <li class="inicio"><a href="#inicio">Inicio</a></li>
+            <li class="about"><a href="#about">Sobre mi</a></li>
+            <li class="about"><a href="#habilidades">Habilidades</a></li>
+            <li class="about"><a href="#servicios">Servicios</a></li>
+            <li class="proyectos"><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto" class="cotacto_btn">Contáctame</a></li>  
         </div>
     </header>
 
@@ -64,9 +68,74 @@
     </script>
 
 <!-- Vamos a crear una sección main que contendrá 3 elementos article, uno con una pequeña descripción, uno con un las skills y clientes principales, otro con dos o tres trabajos y una sección de contacto. Todos vinculados a los enlaces de la navbar con un ancla a cada sección -->
-    <main>
-        
-    </main>
+
+<!-- INICIO SECCIÓN -->
+    <!-- Creamos un contenedor donde pondremos nuestro nombre en grande y las redes sociales -->
+    <section class="inicio" id="inicio">
+        <div class="inicio-nombre">
+            <h1>Alin Cosmin Enciu</h1>
+        </div>
+        <div class="inicio-social">
+            <a href="https://www.instagram.com/enciuac/" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Utilizamos el comando blank para hacer que los enlaces se abran en una nueva pestaña -->
+            <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.behance.net/alncosminenciu" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
+        </div>
+        <hr> <!-- Esto es una línea separadora -->
+
+<!-- ABOUT SECCIÓN -->
+        <div class="inicio-about">
+            <h4>
+                Soy un joven apasionado por las finanzas y el diseño gráfico, con el objetivo de emprender proyectos que fusionen eficiencia financiera y estética visual. Me entusiasma la idea de crear una agencia de marketing especializada en branding, diseño de logotipos, materiales promocionales e interfaces digitales, ayudando a empresas a destacar con identidades visuales sólidas y atractivas.
+            </h4>
+        </div>
+        <hr>
+    </section>
+<!-- HABILIDADES Y SERVICIOS SECCIÓN -->
+    <!-- Vamos a realizar una sección con dos contenedores en forma de columna, uno para las habilidades y otro para nombrar los servicios -->
+    <section class="habilidades-servicios">
+    <!-- Habilidades -->
+        <div class="habilidades" id="habilidades">
+            <div class="habilidades_titulo">
+                <h2>Skills</h2>
+            </div>
+            <!-- Lista de habilidades -->
+            <div class="habilidades_lista">
+                <h5>Diseño de Marca</h5>
+                <hr>
+                <h5>Diseño Web</h5>
+                <hr>
+                <h5>Diseño de Producto</h5>
+                <hr>
+                <h5>Diseño Visual</h5>
+                <hr>
+                <h5>Diseño de Interfaces</h5>
+                <hr>
+            </div>
+        </div>
+    <!-- Servicios -->
+        <div class="servicios" id="servicios">
+            <div class="servicios_titulo">
+                <h2>Skills</h2>
+            </div>
+            <!-- Lista de servicios -->
+            <div class="servicios_lista">
+                <h5>Branding</h5>
+                <hr>
+                <h5>Diseño Publicitario & Editorial</h5>
+                <hr>
+                <h5>Diseño de Sitios Web</h5>
+                <hr>
+                <h5>Diseño de Interfaces Digitales</h5>
+                <hr>
+                <h5>Packaging</h5>
+                <hr>
+            </div>
+        </div>
+    </section>
+
+<!-- PROYECTOS SECCIÓN -->
+
+<!-- CONTACTO SECCIÓN -->
 
 </body>
 </html>

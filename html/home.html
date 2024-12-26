@@ -4,10 +4,10 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-
+<!-- Vinculamos el documento con la hoja de estilos de css -->
     <link rel="stylesheet" href="/css/style.css">
+<!-- Vinculamos el documentos con la librería de font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-
 </head>
 <body>
 <!-- Creamos el header, aquí haremos un logo, una lista con 3 links de interés y un botón de contacto (Cuya acción será mandarnos a una página de contacto) -->
@@ -23,11 +23,50 @@
             
 <!-- Creación de un botón para la versión móvil, solo aparecerá cuando la web este en mobile -->
             <div class="menu_btn">
-                <i class="fa-solid fa-bars"></i>
+                <i class="fa-solid fa-bars"></i> <!-- Icono de las barras -->
             </div>
+        </div>
 
+<!-- Menu móvil -->
+        <div class="mobile_menu">
+            <li class="inicio"><a href="/html/home.html">Inicio</a></li>
+            <li class="proyectos"><a href="/html/proyectos.html">Proyectos</a></li>
+            <li class="about"><a href="/html/about.html">Sobre mi</a></li>
+            <li><a href="/html/contacto.html" class="cotacto_btn">Contáctame</a></li>  
         </div>
     </header>
-    
+
+<!-- Código para el menú Mobile -->
+    <script>
+    // Seleccionamos el botón de menú (el contenedor de las barras)
+    const menu_btn = document.querySelector('.menu_btn')
+
+    // Seleccionamos el icono dentro del botón de menú (el icono de las barras)
+    const menu_btnIcon = document.querySelector('.menu_btn i')
+
+    // Seleccionamos el menú móvil (el contenedor que se mostrará u ocultará)
+    const mobile_menu = document.querySelector('.mobile_menu')
+
+    // Asignamos una función al evento de clic del botón de menú
+    menu_btn.onclick = function () {
+        // Alternamos la clase 'open' en el menú móvil. Si está abierta, la cerramos, si está cerrada, la abrimos.
+        mobile_menu.classList.toggle('open')
+
+        // Comprobamos si el menú tiene la clase 'open' (es decir, si está abierto)
+        const isOpen = mobile_menu.classList.contains('open')
+
+        // Cambiamos el icono en el botón de menú: 
+        // Si el menú está abierto, mostramos la 'X', si está cerrado, mostramos las barras
+        menu_btnIcon.classList = isOpen
+            ? 'fa-solid fa-xmark'  // Si el menú está abierto, mostramos la 'X'
+            : 'fa-solid fa-bars'   // Si el menú está cerrado, mostramos las barras
+    }
+    </script>
+
+<!-- Vamos a crear una sección main que contendrá 3 elementos article, uno con una pequeña descripción, uno con un las skills y clientes principales, otro con dos o tres trabajos y una sección de contacto. Todos vinculados a los enlaces de la navbar con un ancla a cada sección -->
+    <main>
+        
+    </main>
+
 </body>
 </html>

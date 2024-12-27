@@ -45,17 +45,19 @@ header{
 .navbar{
     width: 100%;
     height: 60px;
-    max-width: 1200px;
+    max-width: 1440px;
     margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    padding-top: 16px;
 }
 
 /* Organizamos los enlaces a las págnias, posicionándolos en fila y con un espacio de 36px entre ellos */
 .navbar .enlaces{
     display: flex;
     gap: 36px;
+    align-items: center;
 
 }
 
@@ -99,7 +101,7 @@ header{
     top: 60px;
     height: 0;
     width: 300px; 
-    background: rgba(249, 202, 52, 0.15); /*Fondo con transparencia*/
+    background: rgba(249, 202, 52, 0.5); /*Fondo con transparencia*/
     backdrop-filter: blur(15px); /* Hacemos que lo haya detrás del fondo se difumine*/
     border-radius: 10px;
     overflow: hidden; /* Hacemos que el contenido que está desbordado no se muestre. Además de ocultar las barras de desplazamento del navegador */
@@ -156,7 +158,6 @@ header{
     display: flex;
     flex-direction: column;
     height: auto;
-    padding: 128px 64px;
 }
 
 /* Estilizamos el H1, lo centramos y definimos su altura*/
@@ -167,7 +168,13 @@ header{
     letter-spacing: -0,5em;
     font-weight: 900;
     text-align: center;
-    padding: 0 0 32px 0;
+    padding: 128px 64px;
+    margin: 128px 0;
+
+}
+
+.inicio hr{
+    margin: 0 128px;
 }
 
 /* Centramos los iconos sociales y les aumentamos el tamaño */
@@ -176,7 +183,7 @@ header{
     gap: 36px;
     font-size: 24px;
     align-self: center;
-    padding: 96px 0 24px 0;
+    padding: 0 0 64px 0;
 }
 
 /* Cambiamos el color de los iconos sociales y trabajamos el hover de estos */
@@ -188,15 +195,254 @@ header{
     color: #f9ca34;
 }
 
-/*  */
-.inicio-about {
+
+/* MEDIA QUERIES INICIO */
+/* Ajustamos todo para que sea mobile responsive*/
+
+/* Ajustes para pantallas pequeñas */
+/*Tomamos como referencia el Ipad Mini*/
+@media (max-width: 768px) {
+    .inicio-nombre h1 {
+        font-size: 120px;
+        padding: 64px 32px;
+        margin: 64px 0;
+    }
+
+    .inicio hr {
+        margin: 0 64px;
+    }
+
+    .inicio-social {
+        gap: 24px;
+        font-size: 20px;
+        padding: 0 0 32px 0;
+    }
+}
+
+/* Ajustes para pantallas muy pequeñas */
+/* Tomamos como referencia el Iphone SE*/
+@media (max-width: 375px) {
+    .inicio-nombre h1 {
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        align-items: center;
+        height: auto;
+        font-size: 48px;
+        padding: 32px 16px;
+        margin: 32px 0;
+        letter-spacing: -0.3em;
+
+    }
+
+    .inicio hr {
+        margin: 0 32px;
+    }
+
+    .inicio-social {
+        gap: 16px;
+        font-size: 16px;
+        padding: 0 0 16px 0;
+    }
+}
+
+/* SECCIÓN ABOUT */
+/* Estilizamos la sección de about poniendolo en columnas y que la posición de este esté al final de contenedor, además de ajustarle un alto automático y un espaciado de 64px en la izquierda y la deracha */
+.about{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    height: auto;
+}
+
+/* Adaptamos los colores y el padding. Además de poner un ancho máximo de 700px */
+.about-about {
     display: flex;
     color: #f5f5f5;
     max-width: 700px;
-    padding: 64px 0 64px 0;
+    margin: 128px 128px;
 }
 
-.inicio-about h4{
+/* Ajustamos el tamaño y grosor del texto */
+.about-about h4{
   font-weight: 400;
   font-size: 22px;
+}
+
+/* Ajustamos el separador 1*/
+.sep_1{
+    margin: 0 128px;
+}
+
+/* MEDIA QUERIES ABOUT*/
+/* Dispositivos medianos (tablets, >=768px) */
+@media (max-width: 768px) {
+    .about {
+        padding: 0 32px; /* Reduce el espaciado lateral */
+    }
+    .about-about {
+        margin: 64px auto; /* Reduce el margen superior/inferior */
+    }
+    .about-about h4 {
+        font-size: 20px; /* Reduce el tamaño de fuente */
+    }
+}
+
+/* Dispositivos pequeños (móviles, >=480px) */
+@media (max-width: 375px) {
+    .about {
+        padding: 0 16px; /* Aún menos espaciado lateral */
+    }
+    .about-about {
+        margin: 32px auto; /* Margen aún más reducido */
+    }
+    .about-about h4 {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+    .sep_1 {
+        max-width: 100%; /* Permite que el separador ocupe todo el ancho */
+        margin: 0 64px;
+    }
+}
+
+/* HABILIDADES Y SERVICIOS SECCIÓN */
+
+/* HABILIDADES*/
+/* Ajustamos el contenedor y ponemos un espaciado lateral de 128px. Además de añadir un espaciado entre elementos de 128px */
+.habilidades-servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 128px;
+    gap: 128px;
+}
+
+/* Ajustamos el contenedor de las habilidades, dandole un tamaño de 700px de ancho y un espaciado de 64px entre cada elemento, en este caso entre el contenedor de la palabra skills y el que contiene la lista de habilidades*/
+.habilidades-servicios .habilidades{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 64px;
+
+}
+
+/* Ajustamos el texto de "Skill", cambiándole el color y el tamaño*/
+.habilidades_titulo h2{
+    font-size: 56px;
+    color: #f5f5f5;
+}
+/* Ajustamos la lista de habilidades y le damos un espaciado de 24px entre cada elemento de la lista*/
+.habilidades-servicios .habilidades .habilidades_lista{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cambiamos el color, grosor y tamaño de texto de la lista de Habilidades*/
+.habilidades-servicios .habilidades .habilidades_lista h5{
+    color: #f5f5f5;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+/* SERVICIOS*/
+/* Realizaremos los mismos ajustes que hicimos anteriormente en la sección de habilidades, dado que van juntas y deben tener la misma armonía visual*/
+
+/* Ajustamos el contenedor y ponemos un espaciado lateral de 128px */
+.habilidades-servicios{
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    padding: 128px;
+}
+
+/* Ajustamos el contenedor de las habilidades, dandole un tamaño de 700px de ancho y un espaciado de 64px entre cada elemento, en este caso entre el contenedor de la palabra skills y el que contiene la lista de habilidades*/
+.habilidades-servicios .servicios{
+    display: flex;
+    flex-direction: column;
+    width: 700px;
+    gap: 64px;
+
+}
+
+/* Ajustamos el texto de "Skill", cambiándole el color y el tamaño*/
+.servicios_titulo h2{
+    font-size: 56px;
+    color: #f5f5f5;
+}
+/* Ajustamos la lista de habilidades y le damos un espaciado de 24px entre cada elemento de la lista*/
+.habilidades-servicios .servicios .servicios_lista{
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Cambiamos el color, grosor y tamaño de texto de la lista de Habilidades*/
+.habilidades-servicios .servicios .servicios_lista h5{
+    color: #f5f5f5;
+    font-weight: 400;
+    font-size: 20px;
+}
+
+
+/* MEDIA QUERIES */
+
+/* Para tablets (>=768px y <=1024px) */
+@media (max-width: 1024px) {
+    .habilidades-servicios {
+        flex-direction: column; /* Cambia a disposición en columna */
+        padding: 64px; /* Reduce el padding lateral */
+        gap: 64px; /* Reduce el espaciado entre las secciones */
+    }
+
+    .habilidades-servicios .habilidades,
+    .habilidades-servicios .servicios {
+        width: 100%; /* Ocupa todo el ancho disponible */
+        gap: 48px; /* Reduce el espaciado interno */
+    }
+
+    .habilidades_titulo h2,
+    .servicios_titulo h2 {
+        font-size: 48px; /* Reduce el tamaño de los títulos */
+    }
+}
+
+/* Para móviles (<=768px) */
+@media (max-width: 768px) {
+    .habilidades-servicios {
+        padding: 32px; /* Menor padding para pantallas pequeñas */
+        gap: 32px; /* Reduce el espacio entre las secciones */
+    }
+
+    .habilidades-servicios .habilidades,
+    .habilidades-servicios .servicios {
+        gap: 32px; /* Ajusta el espaciado interno */
+    }
+
+    .habilidades_titulo h2,
+    .servicios_titulo h2 {
+        font-size: 36px; /* Ajusta el tamaño del título */
+    }
+
+    .habilidades-servicios .habilidades .habilidades_lista h5,
+    .habilidades-servicios .servicios .servicios_lista h5 {
+        font-size: 18px; /* Tamaño de fuente más pequeño */
+    }
+}
+
+/* Para móviles pequeños (<=480px) */
+@media (max-width: 480px) {
+    .habilidades-servicios {
+        padding: 16px; /* Padding aún más reducido */
+    }
+
+    .habilidades_titulo h2,
+    .servicios_titulo h2 {
+        font-size: 28px; /* Títulos aún más pequeños */
+    }
+
+    .habilidades-servicios .habilidades .habilidades_lista h5,
+    .habilidades-servicios .servicios .servicios_lista h5 {
+        font-size: 16px; /* Texto más pequeño para listas */
+    }
 }

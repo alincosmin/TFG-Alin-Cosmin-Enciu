@@ -15,11 +15,11 @@
         <div class="navbar">
             <div class="logo"><a href="/html/home.html"><img src="/img/logo-gris.png" alt=""></a></div>
             <ul class="enlaces">
-                <li class="inicio"><a href="#inicio">Inicio</a></li>
-                <li class="about"><a href="#about">Sobre mi</a></li>
-                <li class="about"><a href="#habilidades">Habilidades</a></li>
-                <li class="about"><a href="#servicios">Servicios</a></li>
-                <li class="proyectos"><a href="#proyectos">Proyectos</a></li>
+                <li class="inicio_li"><a href="#inicio">Inicio</a></li>
+                <li class="about_li"><a href="#about">About</a></li>
+                <li class="habilidades_li"><a href="#habilidades">Habilidades</a></li>
+                <li class="servicios_li"><a href="#servicios">Servicios</a></li>
+                <li class="proyectos_li"><a href="#proyectos">Proyectos</a></li>
             </ul>
             <a href="#contacto" class="cotacto_btn">Contáctame</a>
             
@@ -31,11 +31,11 @@
 
 <!-- Menu móvil -->
         <div class="mobile_menu">
-            <li class="inicio"><a href="#inicio">Inicio</a></li>
-            <li class="about"><a href="#about">Sobre mi</a></li>
-            <li class="about"><a href="#habilidades">Habilidades</a></li>
-            <li class="about"><a href="#servicios">Servicios</a></li>
-            <li class="proyectos"><a href="#proyectos">Proyectos</a></li>
+            <li class="inicio:li"><a href="#inicio">Inicio</a></li>
+            <li class="about_li"><a href="#about">About</a></li>
+            <li class="habilidades_li"><a href="#habilidades">Habilidades</a></li>
+            <li class="servicios_li"><a href="#servicios">Servicios</a></li>
+            <li class="proyectos_li"><a href="#proyectos">Proyectos</a></li>
             <li><a href="#contacto" class="cotacto_btn">Contáctame</a></li>  
         </div>
     </header>
@@ -139,7 +139,7 @@
 
 <!-- PROYECTOS SECCIÓN -->
  <!-- Crearemos una sección con 3 div, uno para el título, uno principal que contendra un proyecto en grande y otro div con un total de 4 proyectos en pequeño, los cuales iran de 2 en 2 -->
-    <secction class="proyectos">
+    <secction class="proyectos" id="proyectos">
         <div class="proyectos_principal">
             <div class="proyectos_titulo">
                 <h2>Proyectos</h2>
@@ -157,24 +157,145 @@
             </div>
             <div class="proyectos_lista">
                 <div class="junior">
-    
+                    <div class="proyectos_img">
+                        <a href="/html/junior.html"><img src="/img/logo-junior-vertical.png" alt="junior"></a>
+                    </div>
+        
+                    <div class="junior_info">
+                        <h3>Junior</h3>
+                        <h4>Identidad de marca y prototipado de la app</h4>
+                    </div>
                 </div>
 
                 <div class="sellorojo">
-    
+                    <div class="proyectos_img">
+                        <a href="/html/sellorojo.html"><img src="/img/logo-sellorojo-vertical.png" alt="sellorojo"></a>
+                    </div>
+        
+                    <div class="sellorojo_info">
+                        <h3>Sello Rojo</h3>
+                        <h4>Identidad de marca</h4>
+                    </div>
                 </div>
 
                 <div class="focus">
-
+                    <div class="proyectos_img">
+                        <a href="/html/homi.html"><img src="/img/logo-focus-horizontal.png" alt="focus"></a>
+                    </div>
+        
+                    <div class="focus_info">
+                        <h3>Focus</h3>
+                        <h4>Identidad de marca y prototipado de la app</h4>
+                    </div>
                 </div>
-
+                
                 <div class="carralero">
-                    
+                    <div class="proyectos_img">
+                        <a href="/html/homi.html"><img src="/img/logo-carralero-vertical.png" alt="carralero"></a>
+                    </div>
+        
+                    <div class="carralero_info">
+                        <h3>Carralero</h3>
+                        <h4>Identidad de marca y diseño web</h4>
+                    </div>
                 </div>
             </div>
         </div>
     </secction>
-<!-- CONTACTO SECCIÓN -->
 
+<!-- CONTACTO SECCIÓN -->
+<section id="contacto">
+  
+    <h1 class="encabezado-seccion">Contáctame</h1>
+    
+    <div class="envoltura-contacto">
+    
+    <!-- Sección izquierda de la página de contacto --> 
+      
+      <form id="formulario-contacto" class="formulario-horizontal" role="form">
+         
+        <div class="grupo-formulario">
+          <div class="col-sm-12">
+            <input type="text" class="control-formulario" id="nombre" placeholder="NOMBRE" name="nombre" value="" required>
+          </div>
+        </div>
+  
+        <div class="grupo-formulario">
+          <div class="col-sm-12">
+            <input type="email" class="control-formulario" id="correo" placeholder="CORREO ELECTRÓNICO" name="correo" value="" required>
+          </div>
+        </div>
+  
+        <textarea class="control-formulario" rows="10" placeholder="MENSAJE" name="mensaje" required></textarea>
+        
+        <button class="btn btn-primario boton-enviar" id="enviar" type="submit" value="ENVIAR">
+          <div class="boton-alt-enviar">
+            <i class="fa fa-paper-plane"></i><span class="texto-enviar">ENVIAR</span>
+          </div>
+        </button>
+        
+      </form>
+      
+    <!-- Fin de la sección izquierda de la página de contacto --> 
+      
+        <div class="contenedor-contacto-directo">
+  
+          <ul class="lista-contacto">
+            <li class="elemento-lista">
+                <i class="fa-solid fa-map-pin">
+                    <span class="texto-contacto lugar">Cuenca, Castilla La-Mancha</span>
+                </i>
+            </li>
+            
+            <li class="elemento-lista">
+                <i class="fa-solid fa-phone">
+                    <span class="texto-contacto teléfono">
+                        (34) 642 925 583
+                    </span>
+                </i>
+            </li>
+            
+            <li class="elemento-lista">
+                <i class="fa-solid fa-envelope">
+                    <span class="texto-contacto correo">
+                        <a href="mailto:#" title="Envíanos un correo">alincosmine@alumnos.cei.es</a>
+                    </span>
+                </i>
+            </li>
+          </ul>
+  
+          <hr>
+          <ul class="lista-redes-sociales">
+            <li>
+                <a href="https://github.com/alincosmin" target="_blank" class="icono-contacto">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.instagram.com/enciuac/" target="_blank" class="icono-contacto">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.behance.net/alncosminenciu" target="_blank" class="icono-contacto">
+                    <i class="fa-brands fa-square-behance"></i>
+                </a>
+            </li>
+            <li>
+                <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank" class="icono-contacto">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </li>       
+          </ul>
+          <hr>
+  
+          <div class="derechos-de-autor">&copy; TODOS LOS DERECHOS RESERVADOS</div>
+  
+        </div>
+      
+    </div>
+    
+  </section>  
+  
 </body>
 </html>

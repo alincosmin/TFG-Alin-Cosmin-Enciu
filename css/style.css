@@ -2,15 +2,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+    margin: 0; /* Eliminamos márgenes por defecto */
+    padding: 0; /* Eliminamos paddings por defecto */
+    box-sizing: border-box; /* Incluimos el padding y border dentro del tamaño total de los elementos */
+    font-family: 'Poppins', sans-serif; /* Aplicamos la fuente por defecto */
 }
 
 body{
-    height: 100vh;
-    background-color: #191919;
+    height: 100vh; /* Ajustamos la altura del body al 100% del viewport */
+    background-color: #191919; /* Fondo oscuro para mejor contraste */
 }
 
 .navbar li{
@@ -200,7 +200,6 @@ header{
 /* Ajustamos todo para que sea mobile responsive*/
 
 /* Ajustes para pantallas pequeñas */
-/*Tomamos como referencia el Ipad Mini*/
 @media (max-width: 768px) {
     .inicio-nombre h1 {
         font-size: 120px;
@@ -219,8 +218,16 @@ header{
     }
 }
 
+/* Realizamos este ajuste dado que el h1 es el único que rompe el responsive en este tamaño de pantalla */
+@media (max-width: 425px) {
+    .inicio-nombre h1 {
+        font-size: 80px;
+        padding: 64px 32px;
+        margin: 64px 0;
+    }
+}
+
 /* Ajustes para pantallas muy pequeñas */
-/* Tomamos como referencia el Iphone SE*/
 @media (max-width: 375px) {
     .inicio-nombre h1 {
         display: flex;
@@ -457,69 +464,266 @@ header{
     }
 }
 
-/* PROYECTOS*/
-.proyectos{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 100%;
-    height: min-content;
-    padding: 128px;
+/* --- Sección de Proyectos --- */
+.proyectos {
+    display: flex; /* Flexbox para centrar elementos */
+    align-items: center; /* Centrado vertical */
+    justify-content: center; /* Centrado horizontal */
+    width: 100%; /* Ocupa todo el ancho */
+    height: min-content; /* Ajusta la altura según el contenido */
+    padding: 128px; /* Espaciado interno */
 }
 
-.proyectos_titulo{
-    display: flex;
-    gap: 24px;
-    width: 100%;
+.proyectos_titulo {
+    display: flex; /* Colocamos elementos en fila */
+    gap: 24px; /* Espaciado entre elementos */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
-.proyectos_titulo h2{
-    color: #f5f5f5;
-    font-size: 56px;
+.proyectos_titulo h2 {
+    color: #f5f5f5; /* Color claro para el texto */
+    font-size: 56px; /* Tamaño del título */
 }
 
-/* Ajustamos el contenedor que contendrá el proyecto de homi */
-.homi{
-    display: grid;
-    flex: none;
-    gap: 40px;
-    height: min-content;
-    padding: 0 0 126px 0;
-    position: relative;
-    width: 100%;
+/* Contenedor del proyecto "homi" */
+.homi {
+    display: grid; /* Usamos diseño de grilla */
+    flex: none; /* No permite flexibilidad */
+    gap: 40px; /* Espaciado entre elementos */
+    height: min-content; /* Ajusta altura según el contenido */
+    padding: 0 0 126px 0; /* Espaciado interno inferior */
+    position: relative; /* Relativo para ajustes internos */
+    width: 100%; /* Ocupa todo el ancho */
 }
 
-/* Ajustamos el contenedor de la imágen*/
-.homi_img{
-    display: contents;
+/* Contenedor de la imagen del proyecto */
+.homi_img {
+    display: contents; /* Renderizamos solo el contenido */
 }
 
-/* Ajustamos la imágen del proyecto*/
-.homi_img img{
-    display: block;
-    max-width: 1440px;
+/* Estilo de la imagen del proyecto */
+.homi_img img {
+    display: block; /* Se muestra como un bloque */
+    max-width: 1440px; /* Ancho máximo */
 }
 
-.homi_img img:hover{
-    filter: brightness(0.75);
+.homi_img img:hover {
+    filter: brightness(0.75); /* Oscurecemos al pasar el mouse */
 }
 
+/* Información del proyecto */
+.homi_info {
+    display: flex; /* Diseño en columna */
+    flex-direction: column;
+    height: min-content; /* Ajusta altura al contenido */
+}
 
-.homi_info{
+.homi_info h3 {
+    color: #f5f5f5; /* Color claro */
+    font-size: 24px; /* Tamaño del título */
+}
+
+.homi_info h4 {
+    color: rgba(245, 245, 245, 0.75); /* Color semitransparente */
+    font-size: 18px; /* Tamaño del subtítulo */
+    font-weight: 400; /* Texto normal */
+}
+
+/* Lista de proyectos */
+.proyectos_lista {
+    display: flex; /* Flexbox para diseño en fila */
+    flex-wrap: wrap; /* Permite ajustar elementos en filas */
+    gap: 36px; /* Espaciado entre elementos */
+    max-width: 1440px; /* Ancho máximo */
+}
+
+/* Estilo de las imágenes en la lista de proyectos */
+.proyectos_img img {
+    width: 700px; /* Ancho fijo */
+    height: 700px; /* Altura fija */
+    background-color: #f5cf8e; /* Color de fondo */
+}
+
+.proyectos_img img:hover {
+    filter: brightness(0.75); /* Oscurecemos al pasar el mouse */
+}
+
+/* Estilo de información de proyectos individuales */
+/* Proyecto: Junior */
+.junior_info {
     display: flex;
     flex-direction: column;
     height: min-content;
 }
 
-.homi_info h3{
+.junior_info h3 {
     color: #f5f5f5;
-    font-size: 24px;
+    font-size: 18px;
 }
 
-.homi_info h4{
+.junior_info h4 {
     color: rgba(245, 245, 245, 0.75);
-    font-size: 18px;
+    font-size: 14px;
     font-weight: 400;
+}
+
+/* Proyecto: Sello Rojo */
+.sellorojo_info {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+.sellorojo_info h3 {
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.sellorojo_info h4 {
+    color: rgba(245, 245, 245, 0.75);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Proyecto: Focus */
+.focus_info {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+.focus_info h3 {
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.focus_info h4 {
+    color: rgba(245, 245, 245, 0.75);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* Proyecto: Carralero */
+.carralero_info {
+    display: flex;
+    flex-direction: column;
+    height: min-content;
+}
+
+.carralero_info h3 {
+    color: #f5f5f5;
+    font-size: 18px;
+}
+
+.carralero_info h4 {
+    color: rgba(245, 245, 245, 0.75);
+    font-size: 14px;
+    font-weight: 400;
+}
+
+/* --- Media Queries para la sección de Proyectos --- */
+@media (max-width: 1024px) {
+    .proyectos {
+        padding: 64px; /* Reducimos el padding */
+    }
+
+    .homi_img img {
+        width: 100%; /* Imagen ocupa todo el ancho */
+        padding: 36px 0 0 0; /* Espaciado superior */
+    }
+
+    .proyectos_titulo h2 {
+        font-size: 48px; /* Tamaño más pequeño del título */
+    }
+
+    .proyectos_lista {
+        flex-direction: column; /* Cambiamos a diseño en columna */
+        align-items: center; /* Centramos elementos */
+        justify-content: center; /* Centramos verticalmente */
+        gap: 36px; /* Espaciado entre elementos */
+    }
+
+    .proyectos_img img {
+        width: 100%; /* Ancho dinámico */
+        height: auto; /* Altura automática */
+    }
+
+    .homi {
+        gap: 12px; /* Menor espaciado entre elementos */
+        padding: 0 0 36px 0; /* Reducimos el padding inferior */
+    }
+}
+
+@media (max-width: 768px) {
+    .proyectos {
+        padding: 32px; /* Padding más reducido */
+    }
+
+    .homi_img img {
+        width: 100%;
+        padding: 36px 0 0 0;
+    }
+
+    .proyectos_titulo h2 {
+        font-size: 36px; /* Reducimos más el tamaño del título */
+    }
+
+    .proyectos_lista {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .proyectos_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .homi {
+        gap: 12px;
+        padding: 0 0 36px 0;
+    }
+}
+
+@media (max-width: 375px) {
+    .proyectos {
+        padding: 32px;
+    }
+
+    .homi_img img {
+        width: 100%;
+        padding: 36px 0 0 0;
+    }
+
+    .proyectos_titulo h2 {
+        font-size: 28px; /* Tamaño mínimo del título */
+    }
+
+    .proyectos_lista {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 36px;
+    }
+
+    .proyectos_img img {
+        width: 100%;
+        height: auto;
+    }
+
+    .homi {
+        gap: 12px;
+        padding: 0 0 36px 0;
+    }
+
+    .homi_info h3 {
+        font-size: 18px; /* Ajustamos el tamaño del título */
+    }
+
+    .homi_info h4 {
+        font-size: 14px; /* Ajustamos el tamaño del subtítulo */
+    }
 }
 
 
@@ -625,7 +829,7 @@ header{
 /* Pantallas hasta 1024px */
 @media (max-width: 1024px) {
     .proyectos {
-        padding: 32px;
+        padding: 64px;
     }
 
     .homi_img img {
@@ -634,7 +838,7 @@ header{
     }
 
     .proyectos_titulo h2 {
-        font-size: 28px;
+        font-size: 48px;
     }
 
     .proyectos_lista {
@@ -667,7 +871,7 @@ header{
     }
 
     .proyectos_titulo h2 {
-        font-size: 28px;
+        font-size: 36px;
     }
 
     .proyectos_lista {
@@ -719,7 +923,16 @@ header{
         gap: 12px;
         padding: 0 0 36px 0;
     }
+
+    .homi_info h3{
+        font-size: 18px;
+    }
+
+    .homi_info h4{
+        font-size: 14px;
+    }
 }
+
 
 
 /* SECCIÓN DE CONTACTO */
@@ -735,17 +948,16 @@ header{
   /* Contenedor principal de contacto */
   .envoltura-contacto {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center;
     margin: 0 auto;
     padding: 20px;
-    max-width: 840px;
+    max-width: 1440px;
   }
   
   /* Formulario de contacto */
   .formulario-horizontal {
-    max-width: 400px;
+    width: 50%;
     font-weight: 400;
   }
   
@@ -790,123 +1002,183 @@ header{
     align-items: center;
     gap: 16px;
   }
-
-  /* Estilo para la sección de contacto directo */
-  .contenedor-contacto-directo {
-    max-width: 400px;
-  }
   
-  .lista-contacto {
-    list-style-type: none;
-    padding-left: 0;
-    margin: 20px 0;
-  }
-  
-  .elemento-lista {
-    line-height: 2;
-    color: #f5f5f5;
-  }
-  
-  .elemento-lista i {
-    margin: 0 10px 0 0;
-    color: #f9ca34;
-  }
-  
-  .texto-contacto {
-    color: #f5f5f5;
-    font-size: 16px;
-    font-weight: 400;
-  }
-  
-  .texto-contacto a {
-    color: #f5f5f5;
-    text-decoration: none;
-    transition: color 0.3s ease;
-  }
-  
-  .texto-contacto a:hover {
-    color: #f9ca34;
-  }
-  
-  .lista-redes-sociales {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    list-style-type: none;
-    padding-left: 0;
-    text-align: center;
-    margin: 20px 0;
-  }
-  
-
-  .icono-contacto {
-    font-size: 24px;
-    color: #f5f5f5;
-    margin: 0 10px;
-    transition: color 0.3s ease;
-  }
-  
-  .icono-contacto:hover {
-    color: #f9ca34;
-  }
-  
-  .derechos-de-autor {
-    text-align: center;
-    font: 200 14px 'Oswald', sans-serif;
-    color: #f5f5f5;
-    letter-spacing: 1px;
-    margin-top: 20px;
-  }
-  
-  /* Separadores horizontales */
-  hr {
-    border-color: rgba(255, 255, 255, 0.6);
-    margin: 20px 0;
-  }
   
   /* Media queries para pantallas pequeñas */
-  @media screen and (max-width: 850px) {
+  @media screen and (max-width: 1024px) {
     .envoltura-contacto {
       flex-direction: column;
       align-items: center;
     }
-  
-    .contenedor-contacto-directo {
-      margin-top: 40px;
-      max-width: 300px;
+
+    .encabezado-seccion{
+        font-size: 48px;
     }
-  
-    .social-media-list li {
-      height: 55px;
-      width: 55px;
-      line-height: 55px;
-    }
-  
-    .social-media-list li:after {
-      width: 55px;
-      height: 55px;
-    }
+
   }
   
-  @media screen and (max-width: 569px) {
+  @media screen and (max-width: 768px) {
     .control-formulario,
     textarea {
-      width: 280px;
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
-  
-    .contenedor-contacto-directo {
-      max-width: 280px;
+
+    .encabezado-seccion{
+        font-size: 36px;
     }
-  
-    .lista-contacto,
-    .lista-redes-sociales {
-      text-align: center;
-    }
+
   }
   
-  @media screen and (max-width: 410px) {
+  @media screen and (max-width: 375px) {
+    .envoltura-contacto {
+        flex-direction: column;
+        align-items: center;
+        width: 300px;
+        padding: 0;
+      }
+
     .boton-enviar {
       width: 99%;
     }
+
+    .encabezado-seccion{
+        font-size: 28px;
+    }
+
   }
   
+/* SECCIÓN FOOTER*/
+/* Ajustamos el tamaño del contenedor del footer */
+.footer{
+    margin-top: 40px; /* Añade un margen superior de 40px */
+    padding: 80px; /* Aplica un padding de 80px en todos los lados */
+    max-width: 1440px; /* Define el ancho máximo del footer a 1440px */
+    border: #f5f5f5 1px solid; /* Establece un borde de 1px de color gris claro (#f5f5f5) */
+}
+
+/* Establece el diseño de la fila del footer */
+.fila-footer{
+    display: flex; /* Utiliza Flexbox para el contenedor */
+    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas si es necesario */
+    justify-content: space-between; /* Distribuye el espacio entre los elementos de forma equitativa */
+}
+
+/* Define el estilo de los encabezados en las columnas del footer */
+.fila-footer h4{
+    font-size: 18px; /* Define el tamaño de la fuente en 18px */
+    color: #f5f5f5; /* Establece el color del texto en gris claro */
+}
+
+/* Establece el estilo de las columnas dentro del footer */
+.columna-footer{
+    width: 30%; /* Define el ancho de las columnas al 30% */
+    padding: 0 15px; /* Aplica un padding horizontal de 15px en cada lado */
+}
+
+/* Establece los estilos de las listas dentro de las columnas */
+.columna-footer ul{
+    list-style: none; /* Elimina los estilos de lista (como los puntos) */
+}
+
+/* Define los estilos de los enlaces dentro del footer */
+.columna-footer a{
+    text-decoration: none; /* Elimina el subrayado de los enlaces */
+    color: #f5f5f5; /* Establece el color de los enlaces en gris claro */
+    font-size: 14px; /* Define el tamaño de la fuente en 14px */
+}
+
+/* Establece los estilos de los enlaces al pasar el mouse sobre ellos */
+.columna-footer a:hover{
+    color: #f9ca34; /* Cambia el color a un tono amarillo (#f9ca34) al pasar el mouse */
+}
+
+/* Establece el diseño de la sección de redes sociales en el footer */
+.redessociales-footer {
+    display: flex; /* Utiliza Flexbox para alinear los iconos */
+    gap: 24px; /* Define un espacio de 24px entre los iconos */
+    padding-top: 8px; /* Aplica un padding superior de 8px */
+}
+
+/* Define el tamaño de los iconos de redes sociales */
+.redessociales-footer i{
+    font-size: 30px; /* Define el tamaño de los iconos a 30px */
+}
+
+/* MEDIA QUERIES FOOTER*/ 
+
+/* --- Media Queries para pantallas de máximo 1024px --- */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 70px 50px; /* Ajusta el padding */
+        
+    }
+
+    .fila-footer {
+        flex-direction: row; /* Mantiene la dirección de fila */
+        justify-content: space-around; /* Ajusta el espacio entre las columnas */
+    }
+
+    .columna-footer {
+        width: 30%; /* Mantiene el 30% de ancho */
+        padding: 0 15px;
+    }
+
+    .redessociales-footer {
+        gap: 24px; /* Mantiene el mismo espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 30px; /* Mantiene el tamaño original de los iconos */
+    }
+}
+
+/* --- Media Queries para pantallas de máximo 768px --- */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 40px; /* Ajusta el padding */
+    }
+
+    .columna-footer {
+        width: AUTO;
+        padding: 10px 0; /* Ajusta el padding */
+    }
+
+    .redessociales-footer {
+        gap: 20px; /* Ajusta el espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 28px; /* Ajusta el tamaño de los iconos */
+    }
+}
+
+/* --- Media Queries para pantallas de máximo 375px --- */
+@media (max-width: 375px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items:center ;
+        padding: 40px 20px; /* Reduce el padding */
+
+    }
+
+    .fila-footer {
+        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+    }
+
+    .columna-footer {
+        width: 100%; /* Las columnas ocupan el 100% del ancho */
+        padding: 10px 0; /* Ajusta el padding */
+    }
+
+    .redessociales-footer {
+        gap: 16px; /* Reduce el espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 24px; /* Ajusta el tamaño de los iconos */
+    }
+}

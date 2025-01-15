@@ -1,16 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio</title>
-<!-- Vinculamos el documento con la hoja de estilos de css -->
+    <!-- Vinculamos el documento con la hoja de estilos de css -->
     <link rel="stylesheet" href="/css/style.css">
-<!-- Vinculamos el documentos con la librería de font awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <!-- Vinculamos el documentos con la librería de font awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
+
 <body>
-<!-- Creamos el header, aquí haremos un logo, una lista con 3 links de interés y un botón de contacto (Cuya acción será mandarnos a una página de contacto) -->
+    <!-- Creamos el header, aquí haremos un logo, una lista con 3 links de interés y un botón de contacto (Cuya acción será mandarnos a una página de contacto) -->
     <header>
         <div class="navbar">
             <div class="logo"><a href="/html/home.html"><img src="/img/logo-gris.png" alt=""></a></div>
@@ -22,82 +26,88 @@
                 <li class="proyectos_li"><a href="#proyectos">Proyectos</a></li>
             </ul>
             <a href="#contacto" class="cotacto_btn">Contáctame</a>
-            
-<!-- Creación de un botón para la versión móvil, solo aparecerá cuando la web este en mobile -->
+
+            <!-- Creación de un botón para la versión móvil, solo aparecerá cuando la web este en mobile -->
             <div class="menu_btn">
                 <i class="fa-solid fa-bars"></i> <!-- Icono de las barras -->
             </div>
         </div>
 
-<!-- Menu móvil -->
+        <!-- Menu móvil -->
         <div class="mobile_menu">
             <li class="inicio:li"><a href="#inicio">Inicio</a></li>
             <li class="about_li"><a href="#about">About</a></li>
             <li class="habilidades_li"><a href="#habilidades">Habilidades</a></li>
             <li class="servicios_li"><a href="#servicios">Servicios</a></li>
             <li class="proyectos_li"><a href="#proyectos">Proyectos</a></li>
-            <li><a href="#contacto" class="cotacto_btn">Contáctame</a></li>  
+            <li><a href="#contacto" class="cotacto_btn">Contáctame</a></li>
         </div>
     </header>
 
-<!-- Código para el menú Mobile -->
+    <!-- Código para el menú Mobile -->
     <script>
-    // Seleccionamos el botón de menú (el contenedor de las barras)
-    const menu_btn = document.querySelector('.menu_btn')
+        // Seleccionamos el botón de menú (el contenedor de las barras)
+        const menu_btn = document.querySelector('.menu_btn')
 
-    // Seleccionamos el icono dentro del botón de menú (el icono de las barras)
-    const menu_btnIcon = document.querySelector('.menu_btn i')
+        // Seleccionamos el icono dentro del botón de menú (el icono de las barras)
+        const menu_btnIcon = document.querySelector('.menu_btn i')
 
-    // Seleccionamos el menú móvil (el contenedor que se mostrará u ocultará)
-    const mobile_menu = document.querySelector('.mobile_menu')
+        // Seleccionamos el menú móvil (el contenedor que se mostrará u ocultará)
+        const mobile_menu = document.querySelector('.mobile_menu')
 
-    // Asignamos una función al evento de clic del botón de menú
-    menu_btn.onclick = function () {
-        // Alternamos la clase 'open' en el menú móvil. Si está abierta, la cerramos, si está cerrada, la abrimos.
-        mobile_menu.classList.toggle('open')
+        // Asignamos una función al evento de clic del botón de menú
+        menu_btn.onclick = function () {
+            // Alternamos la clase 'open' en el menú móvil. Si está abierta, la cerramos, si está cerrada, la abrimos.
+            mobile_menu.classList.toggle('open')
 
-        // Comprobamos si el menú tiene la clase 'open' (es decir, si está abierto)
-        const isOpen = mobile_menu.classList.contains('open')
+            // Comprobamos si el menú tiene la clase 'open' (es decir, si está abierto)
+            const isOpen = mobile_menu.classList.contains('open')
 
-        // Cambiamos el icono en el botón de menú: 
-        // Si el menú está abierto, mostramos la 'X', si está cerrado, mostramos las barras
-        menu_btnIcon.classList = isOpen
-            ? 'fa-solid fa-xmark'  // Si el menú está abierto, mostramos la 'X'
-            : 'fa-solid fa-bars'   // Si el menú está cerrado, mostramos las barras
-    }
+            // Cambiamos el icono en el botón de menú: 
+            // Si el menú está abierto, mostramos la 'X', si está cerrado, mostramos las barras
+            menu_btnIcon.classList = isOpen
+                ? 'fa-solid fa-xmark'  // Si el menú está abierto, mostramos la 'X'
+                : 'fa-solid fa-bars'   // Si el menú está cerrado, mostramos las barras
+        }
     </script>
 
-<!-- Vamos a crear una sección main que contendrá 3 elementos article, uno con una pequeña descripción, uno con un las skills y clientes principales, otro con dos o tres trabajos y una sección de contacto. Todos vinculados a los enlaces de la navbar con un ancla a cada sección -->
+    <!-- Vamos a crear una sección main que contendrá 3 elementos article, uno con una pequeña descripción, uno con un las skills y clientes principales, otro con dos o tres trabajos y una sección de contacto. Todos vinculados a los enlaces de la navbar con un ancla a cada sección -->
 
-<!-- INICIO SECCIÓN -->
+    <!-- INICIO SECCIÓN -->
     <!-- Creamos un contenedor donde pondremos nuestro nombre en grande y las redes sociales -->
     <section class="inicio" id="inicio">
         <div class="inicio-nombre">
             <h1>Alin Cosmin Enciu</h1>
         </div>
         <div class="inicio-social">
-            <a href="https://www.instagram.com/enciuac/" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Utilizamos el comando blank para hacer que los enlaces se abran en una nueva pestaña -->
-            <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-            <a href="https://www.behance.net/alncosminenciu" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
+            <a href="https://www.instagram.com/enciuac/" target="_blank"><i class="fab fa-instagram"></i></a>
+            <!-- Utilizamos el comando blank para hacer que los enlaces se abran en una nueva pestaña -->
+            <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank"><i
+                    class="fa-brands fa-linkedin"></i></a>
+            <a href="https://www.behance.net/alncosminenciu" target="_blank"><i
+                    class="fa-brands fa-square-behance"></i></a>
         </div>
         <hr> <!-- Esto es una línea separadora -->
     </section>
 
-<!-- ABOUT SECCIÓN -->
+    <!-- ABOUT SECCIÓN -->
     <section class="about" id="about">
         <div class="about-about">
             <h4>
-                Soy un joven apasionado por las finanzas y el diseño gráfico, con el objetivo de emprender proyectos que fusionen eficiencia financiera y estética visual. Me entusiasma la idea de crear una agencia de marketing especializada en branding, diseño de logotipos, materiales promocionales e interfaces digitales, ayudando a empresas a destacar con identidades visuales sólidas y atractivas.
+                Soy un joven apasionado por las finanzas y el diseño gráfico, con el objetivo de emprender proyectos que
+                fusionen eficiencia financiera y estética visual. Me entusiasma la idea de crear una agencia de
+                marketing especializada en branding, diseño de logotipos, materiales promocionales e interfaces
+                digitales, ayudando a empresas a destacar con identidades visuales sólidas y atractivas.
             </h4>
         </div>
     </section>
 
     <hr class="sep_1"> <!-- Separador -->
-    
-<!-- HABILIDADES Y SERVICIOS SECCIÓN -->
+
+    <!-- HABILIDADES Y SERVICIOS SECCIÓN -->
     <!-- Vamos a realizar una sección con dos contenedores en forma de columna, uno para las habilidades y otro para nombrar los servicios -->
     <section class="habilidades-servicios">
-    <!-- Habilidades -->
+        <!-- Habilidades -->
         <div class="habilidades" id="habilidades">
             <div class="habilidades_titulo">
                 <h2>Skills</h2>
@@ -116,7 +126,7 @@
                 <hr>
             </div>
         </div>
-    <!-- Servicios -->
+        <!-- Servicios -->
         <div class="servicios" id="servicios">
             <div class="servicios_titulo">
                 <h2>Servicios</h2>
@@ -137,8 +147,8 @@
         </div>
     </section>
 
-<!-- PROYECTOS SECCIÓN -->
- <!-- Crearemos una sección con 3 div, uno para el título, uno principal que contendra un proyecto en grande y otro div con un total de 4 proyectos en pequeño, los cuales iran de 2 en 2 -->
+    <!-- PROYECTOS SECCIÓN -->
+    <!-- Crearemos una sección con 3 div, uno para el título, uno principal que contendra un proyecto en grande y otro div con un total de 4 proyectos en pequeño, los cuales iran de 2 en 2 -->
     <secction class="proyectos" id="proyectos">
         <div class="proyectos_principal">
             <div class="proyectos_titulo">
@@ -148,7 +158,7 @@
                 <div class="homi_img">
                     <a href="/html/homi.html"><img src="/img/logo-homi-horizontal.png" alt="homi"></a>
                 </div>
-    
+
                 <div class="homi_info">
                     <h3>Homi</h3>
                     <h4>Identidad de marca, prototipado de la app y diseño web</h4>
@@ -160,7 +170,7 @@
                     <div class="proyectos_img">
                         <a href="/html/junior.html"><img src="/img/logo-junior-vertical.png" alt="junior"></a>
                     </div>
-        
+
                     <div class="junior_info">
                         <h3>Junior</h3>
                         <h4>Identidad de marca y prototipado de la app</h4>
@@ -171,7 +181,7 @@
                     <div class="proyectos_img">
                         <a href="/html/sellorojo.html"><img src="/img/logo-sellorojo-vertical.png" alt="sellorojo"></a>
                     </div>
-        
+
                     <div class="sellorojo_info">
                         <h3>Sello Rojo</h3>
                         <h4>Identidad de marca</h4>
@@ -180,20 +190,20 @@
 
                 <div class="focus">
                     <div class="proyectos_img">
-                        <a href="/html/homi.html"><img src="/img/logo-focus-horizontal.png" alt="focus"></a>
+                        <a href="/html/focus.html"><img src="/img/logo-focus-horizontal.png" alt="focus"></a>
                     </div>
-        
+
                     <div class="focus_info">
                         <h3>Focus</h3>
                         <h4>Identidad de marca y prototipado de la app</h4>
                     </div>
                 </div>
-                
+
                 <div class="carralero">
                     <div class="proyectos_img">
-                        <a href="/html/homi.html"><img src="/img/logo-carralero-vertical.png" alt="carralero"></a>
+                        <a href="/html/carralero.html"><img src="/img/logo-carralero-vertical.png" alt="carralero"></a>
                     </div>
-        
+
                     <div class="carralero_info">
                         <h3>Carralero</h3>
                         <h4>Identidad de marca y diseño web</h4>
@@ -203,74 +213,81 @@
         </div>
     </secction>
 
-<!-- CONTACTO SECCIÓN -->
-<section id="contacto">
-  
-    <h1 class="encabezado-seccion">Contáctame</h1>
-    
-    <div class="envoltura-contacto">
-          
-      <form id="formulario-contacto" class="formulario-horizontal" role="form">
-         
-        <div class="grupo-formulario">
-          <div class="col-sm-12">
-            <input type="text" class="control-formulario" id="nombre" placeholder="NOMBRE" name="nombre" value="" required>
-          </div>
-        </div>
-  
-        <div class="grupo-formulario">
-          <div class="col-sm-12">
-            <input type="email" class="control-formulario" id="correo" placeholder="CORREO ELECTRÓNICO" name="correo" value="" required>
-          </div>
-        </div>
-  
-        <textarea class="control-formulario" rows="10" placeholder="MENSAJE" name="mensaje" required></textarea>
-        
-        <button class="btn btn-primario boton-enviar" id="enviar" type="submit" value="ENVIAR">
-          <div class="boton-alt-enviar">
-            <i class="fa fa-paper-plane"></i><span class="texto-enviar">ENVIAR</span>
-          </div>
-        </button>
-        
-      </form>
-      
-    </div>
-  </section>  
-  
-  <footer class="footer">
-    <div class="contenido-footer">
-      <div class="fila-footer">
-        <div class="columna-footer">
-            <h4>About</h4>
-            <ul>
-                <li><a href="#about">About</a></li>
-                <li><a href="#servicios">Servicios</a></li>
-                <li><a href="">Políticas de privacidad</a></li>
-                <li><a href="">Política de cookies</a></li>
-            </ul>
-        </div>
+    <!-- CONTACTO SECCIÓN -->
+    <section id="contacto">
 
-        <div class="columna-footer">
-            <h4>Interés</h4>
-            <ul>
-                <li><a href="">Blog</a></li>
-                <li><a href="mailto:alincosmine@alumnos.cei.es">alincosmine@alumnos.cei.es</a></li>
-                <li><a href="tel:+34642925583">(+34) 642 925 583</a></li>
-            </ul>
-        </div>
+        <h1 class="encabezado-seccion">Contáctame</h1>
 
-        <div class="columna-footer">
-            <h4>Redes Sociales</h4>
-                <div class="redessociales-footer">
-                    <a href="https://www.instagram.com/enciuac/" target="_blank"><i class="fab fa-instagram"></i></a> <!-- Utilizamos el comando blank para hacer que los enlaces se abran en una nueva pestaña -->
-                    <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank"><i class="fa-brands fa-linkedin"></i></a>
-                    <a href="https://www.behance.net/alncosminenciu" target="_blank"><i class="fa-brands fa-square-behance"></i></a>
+        <div class="envoltura-contacto">
+
+            <form id="formulario-contacto" class="formulario-horizontal" role="form">
+
+                <div class="grupo-formulario">
+                    <div class="col-sm-12">
+                        <input type="text" class="control-formulario" id="nombre" placeholder="NOMBRE" name="nombre"
+                            value="" required>
+                    </div>
                 </div>
-        </div>
 
-      </div>
-    </div>
-  </footer>
+                <div class="grupo-formulario">
+                    <div class="col-sm-12">
+                        <input type="email" class="control-formulario" id="correo" placeholder="CORREO ELECTRÓNICO"
+                            name="correo" value="" required>
+                    </div>
+                </div>
+
+                <textarea class="control-formulario" rows="10" placeholder="MENSAJE" name="mensaje" required></textarea>
+
+                <button class="btn btn-primario boton-enviar" id="enviar" type="submit" value="ENVIAR">
+                    <div class="boton-alt-enviar">
+                        <i class="fa fa-paper-plane"></i><span class="texto-enviar">ENVIAR</span>
+                    </div>
+                </button>
+
+            </form>
+
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="contenido-footer">
+            <div class="fila-footer">
+                <div class="columna-footer">
+                    <h4>About</h4>
+                    <ul>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#servicios">Servicios</a></li>
+                        <li><a href="">Políticas de privacidad</a></li>
+                        <li><a href="">Política de cookies</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h4>Interés</h4>
+                    <ul>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="mailto:alincosmine@alumnos.cei.es">alincosmine@alumnos.cei.es</a></li>
+                        <li><a href="tel:+34642925583">(+34) 642 925 583</a></li>
+                    </ul>
+                </div>
+
+                <div class="columna-footer">
+                    <h4>Redes Sociales</h4>
+                    <div class="redessociales-footer">
+                        <a href="https://www.instagram.com/enciuac/" target="_blank"><i
+                                class="fab fa-instagram"></i></a>
+                        <!-- Utilizamos el comando blank para hacer que los enlaces se abran en una nueva pestaña -->
+                        <a href="https://www.linkedin.com/in/alin-cosmin-enciu-171b5a224/" target="_blank"><i
+                                class="fa-brands fa-linkedin"></i></a>
+                        <a href="https://www.behance.net/alncosminenciu" target="_blank"><i
+                                class="fa-brands fa-square-behance"></i></a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </footer>
 
 </body>
+
 </html>

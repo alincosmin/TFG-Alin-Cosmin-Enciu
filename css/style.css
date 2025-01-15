@@ -2,47 +2,56 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
 * {
-    margin: 0; /* Eliminamos márgenes por defecto */
-    padding: 0; /* Eliminamos paddings por defecto */
-    box-sizing: border-box; /* Incluimos el padding y border dentro del tamaño total de los elementos */
-    font-family: 'Poppins', sans-serif; /* Aplicamos la fuente por defecto */
+    margin: 0;
+    /* Eliminamos márgenes por defecto */
+    padding: 0;
+    /* Eliminamos paddings por defecto */
+    box-sizing: border-box;
+    /* Incluimos el padding y border dentro del tamaño total de los elementos */
+    font-family: 'Poppins', sans-serif;
+    /* Aplicamos la fuente por defecto */
 }
 
-body{
-    height: 100vh; /* Ajustamos la altura del body al 100% del viewport */
-    background-color: #191919; /* Fondo oscuro para mejor contraste */
+body {
+    height: 100vh;
+    /* Ajustamos la altura del body al 100% del viewport */
+    background-color: #191919;
+    /* Fondo oscuro para mejor contraste */
 }
 
-.navbar li{
-    list-style: none; /* Eliminamos los estilos de las listas de la barra de navegación*/
+.navbar li {
+    list-style: none;
+    /* Eliminamos los estilos de las listas de la barra de navegación*/
 }
 
-.logo img{
+.logo img {
     width: 50px;
 }
 
-header a{
-    text-decoration: none; /* Eliminamos los tilos de los enlaces de la barra de navegación*/
+header a {
+    text-decoration: none;
+    /* Eliminamos los tilos de los enlaces de la barra de navegación*/
     color: #f5f5f5;
     font-size: 12pt;
 }
 
 /* Animamos los enlaces de la barra de navegación, para que al estar en modo hover y en active cambien de color */
-.enlaces a:hover{
+.enlaces a:hover {
     color: #f9ca34;
 }
 
-.enlaces a:active{
+.enlaces a:active {
     color: #f9ca34;
 }
 
 /* HEADER RESPONSIVE*/
-header{
+header {
     position: relative;
     padding: 0 36px;
 }
+
 /* Haremos que la barra de navegación sea responsive y este centrada. Mediante Flexbox organizamos los elementos con espacio entre ellos */
-.navbar{
+.navbar {
     width: 100%;
     height: 60px;
     max-width: 1440px;
@@ -54,7 +63,7 @@ header{
 }
 
 /* Organizamos los enlaces a las págnias, posicionándolos en fila y con un espacio de 36px entre ellos */
-.navbar .enlaces{
+.navbar .enlaces {
     display: flex;
     gap: 36px;
     align-items: center;
@@ -62,58 +71,72 @@ header{
 }
 
 /* Cambiamos el color y el tamaño del botón, del menu, de la versión mobile */
-.navbar .menu_btn{
+.navbar .menu_btn {
     color: whitesmoke;
     font-size: 24px;
-    cursor: pointer; /*Cambiamos el cursos al hacer hover sobre este elemento*/
-    display: none; /*Lo ocultamos para la versión de ordenador */
+    cursor: pointer;
+    /*Cambiamos el cursos al hacer hover sobre este elemento*/
+    display: none;
+    /*Lo ocultamos para la versión de ordenador */
 }
 
 /* Decoramos el botón de contacto. Animaremos el botón para que cambie de color y de tamaño al estar en modo hover y active*/
-.cotacto_btn{
+.cotacto_btn {
     color: whitesmoke;
-    padding: 8px 16px; 
+    padding: 8px 16px;
     border: solid;
-    border-width: 2px; /*Grosor bordes*/
+    border-width: 2px;
+    /*Grosor bordes*/
     outline: none;
-    border-radius: 20px; /*Bordes redondeados*/
+    border-radius: 20px;
+    /*Bordes redondeados*/
     font-size: 14px;
-    font-weight: bold; /*Ponemos negrita*/
-    cursor: pointer; /*Cambiamos el cursos al hacer hover sobre este elemento*/
-    transition: scale 0.2 ease; /* Esto aplica una transición para el cambio de tamaño (escala) de los botones. La duración es de 0,2 segundos, y el valor ease hace que la animación comience rápida, pero desacelere progresivamente hacia el final. */
+    font-weight: bold;
+    /*Ponemos negrita*/
+    cursor: pointer;
+    /*Cambiamos el cursos al hacer hover sobre este elemento*/
+    transition: scale 0.2 ease;
+    /* Esto aplica una transición para el cambio de tamaño (escala) de los botones. La duración es de 0,2 segundos, y el valor ease hace que la animación comience rápida, pero desacelere progresivamente hacia el final. */
 }
 
-.cotacto_btn:hover{
+.cotacto_btn:hover {
     background-color: whitesmoke;
     color: #191919;
-    scale: 1.05; /* El botón aumenta su tamaño al estar en hover */
+    scale: 1.05;
+    /* El botón aumenta su tamaño al estar en hover */
 }
 
-.cotacto_btn:active{
-    scale: 0.95; /* El botón reduce su tamaño al estar en activo, en este caso al hacer click */
+.cotacto_btn:active {
+    scale: 0.95;
+    /* El botón reduce su tamaño al estar en activo, en este caso al hacer click */
 }
 
 /* MOBILE MENU*/
-.mobile_menu{
+.mobile_menu {
     display: none;
-    position: absolute; /* Con el comando absoule más right y top, haremos que el elemento se posicione de x manera respecto al contenedor más cercano, en este caso el icono de menú (las tres barras)*/
+    position: absolute;
+    /* Con el comando absoule más right y top, haremos que el elemento se posicione de x manera respecto al contenedor más cercano, en este caso el icono de menú (las tres barras)*/
     right: 36px;
     top: 60px;
     height: 0;
-    width: 300px; 
-    background: rgba(249, 202, 52, 0.5); /*Fondo con transparencia*/
-    backdrop-filter: blur(15px); /* Hacemos que lo haya detrás del fondo se difumine*/
+    width: 300px;
+    background: rgba(249, 202, 52, 0.5);
+    /*Fondo con transparencia*/
+    backdrop-filter: blur(15px);
+    /* Hacemos que lo haya detrás del fondo se difumine*/
     border-radius: 10px;
-    overflow: hidden; /* Hacemos que el contenido que está desbordado no se muestre. Además de ocultar las barras de desplazamento del navegador */
-    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275); /* Transición de cambio de altura, con duración de 0,2 segundos y la curva de acceleración personalizada */
+    overflow: hidden;
+    /* Hacemos que el contenido que está desbordado no se muestre. Además de ocultar las barras de desplazamento del navegador */
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Transición de cambio de altura, con duración de 0,2 segundos y la curva de acceleración personalizada */
 }
 
-.mobile_menu.open{
+.mobile_menu.open {
     height: auto;
 }
 
- /* Estilizamos los elementos del menú*/
-.mobile_menu li{
+/* Estilizamos los elementos del menú*/
+.mobile_menu li {
     padding: 10px;
     display: flex;
     align-items: center;
@@ -121,32 +144,35 @@ header{
 }
 
 /*Hacemos que el botón de contacto ocupe el contenedor entero, sea responsive gracias a flex y centre el texto*/
-.mobile_menu .cotacto_btn{
+.mobile_menu .cotacto_btn {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 /* RESPONSIVE NAVBAR *
 
 /* Las reglas CSS dentro de este bloque se aplicarán solo cuando el ancho de la pantalla sea 992px o menor*/
 @media (max-width: 992px) {
+
     /* Ocultamos los enlaces y el botón de contacto */
     .navbar .enlaces,
-    .navbar .cotacto_btn{
+    .navbar .cotacto_btn {
         display: none;
     }
+
     /* Mostramos el icono de barras, que sustituirá a los elementos previamente ocultos */
-    .navbar .menu_btn{
+    .navbar .menu_btn {
         display: block;
     }
 
-    .mobile_menu{
+    .mobile_menu {
         display: block;
     }
 }
 
-@media (max-width: 576px){
-    .mobile_menu{
+@media (max-width: 576px) {
+    .mobile_menu {
         left: 36px;
         width: unset;
     }
@@ -154,18 +180,18 @@ header{
 
 /* SECCIÓN INICIO */
 /* Colocamos el contenedor en flex y sus elementos en columna. Ajustamos la altura del contenedor y centramos los elementos de este. */
-.inicio{
+.inicio {
     display: flex;
     flex-direction: column;
     height: auto;
 }
 
 /* Estilizamos el H1, lo centramos y definimos su altura*/
-.inicio-nombre h1{
+.inicio-nombre h1 {
     font-size: 180px;
     color: #f5f5f5;
     line-height: 106%;
-    letter-spacing: -0,5em;
+    letter-spacing: -0, 5em;
     font-weight: 900;
     text-align: center;
     padding: 128px 64px;
@@ -173,12 +199,12 @@ header{
 
 }
 
-.inicio hr{
+.inicio hr {
     margin: 0 128px;
 }
 
 /* Centramos los iconos sociales y les aumentamos el tamaño */
-.inicio-social{
+.inicio-social {
     display: flex;
     gap: 36px;
     font-size: 24px;
@@ -187,11 +213,11 @@ header{
 }
 
 /* Cambiamos el color de los iconos sociales y trabajamos el hover de estos */
-.inicio-social i{
+.inicio-social i {
     color: #f5f5f5;
 }
 
-.inicio-social i:hover{
+.inicio-social i:hover {
     color: #f9ca34;
 }
 
@@ -254,7 +280,7 @@ header{
 
 /* SECCIÓN ABOUT */
 /* Estilizamos la sección de about poniendolo en columnas y que la posición de este esté al final de contenedor, además de ajustarle un alto automático y un espaciado de 64px en la izquierda y la deracha */
-.about{
+.about {
     display: flex;
     flex-direction: column;
     align-items: end;
@@ -270,13 +296,13 @@ header{
 }
 
 /* Ajustamos el tamaño y grosor del texto */
-.about-about h4{
-  font-weight: 400;
-  font-size: 22px;
+.about-about h4 {
+    font-weight: 400;
+    font-size: 22px;
 }
 
 /* Ajustamos el separador 1*/
-.sep_1{
+.sep_1 {
     margin: 0 128px;
 }
 
@@ -284,29 +310,41 @@ header{
 /* Dispositivos medianos (tablets, >=768px) */
 @media (max-width: 768px) {
     .about {
-        padding: 0 32px; /* Reduce el espaciado lateral */
+        padding: 0 32px;
+        /* Reduce el espaciado lateral */
     }
+
     .about-about {
-        margin: 64px auto; /* Reduce el margen superior/inferior */
+        margin: 64px auto;
+        /* Reduce el margen superior/inferior */
     }
+
     .about-about h4 {
-        font-size: 20px; /* Reduce el tamaño de fuente */
+        font-size: 20px;
+        /* Reduce el tamaño de fuente */
     }
 }
 
 /* Dispositivos pequeños (móviles, >=480px) */
 @media (max-width: 375px) {
     .about {
-        padding: 0 16px; /* Aún menos espaciado lateral */
+        padding: 0 16px;
+        /* Aún menos espaciado lateral */
     }
+
     .about-about {
-        margin: 32px auto; /* Margen aún más reducido */
+        margin: 32px auto;
+        /* Margen aún más reducido */
     }
+
     .about-about h4 {
-        font-size: 18px; /* Tamaño de fuente más pequeño */
+        font-size: 18px;
+        /* Tamaño de fuente más pequeño */
     }
+
     .sep_1 {
-        max-width: 100%; /* Permite que el separador ocupe todo el ancho */
+        max-width: 100%;
+        /* Permite que el separador ocupe todo el ancho */
         margin: 0 64px;
     }
 }
@@ -315,7 +353,7 @@ header{
 
 /* HABILIDADES*/
 /* Ajustamos el contenedor y ponemos un espaciado lateral de 128px. Además de añadir un espaciado entre elementos de 128px */
-.habilidades-servicios{
+.habilidades-servicios {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -324,7 +362,7 @@ header{
 }
 
 /* Ajustamos el contenedor de las habilidades, dandole un tamaño de 700px de ancho y un espaciado de 64px entre cada elemento, en este caso entre el contenedor de la palabra skills y el que contiene la lista de habilidades*/
-.habilidades-servicios .habilidades{
+.habilidades-servicios .habilidades {
     display: flex;
     flex-direction: column;
     width: 700px;
@@ -333,26 +371,27 @@ header{
 }
 
 /* Ajustamos el texto de "Skill", cambiándole el color y el tamaño*/
-.habilidades_titulo h2{
+.habilidades_titulo h2 {
     font-size: 56px;
     color: #f5f5f5;
 }
+
 /* Ajustamos la lista de habilidades y le damos un espaciado de 24px entre cada elemento de la lista*/
-.habilidades-servicios .habilidades .habilidades_lista{
+.habilidades-servicios .habilidades .habilidades_lista {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 /* Cambiamos el color, grosor y tamaño de texto de la lista de Habilidades*/
-.habilidades-servicios .habilidades .habilidades_lista h5{
+.habilidades-servicios .habilidades .habilidades_lista h5 {
     color: #f5f5f5;
     font-weight: 400;
     font-size: 20px;
 }
 
 /* Animamos el text para que cambie el fondo cuando pasamos el cursor por enicma */
-.habilidades-servicios .habilidades .habilidades_lista h5:hover{
+.habilidades-servicios .habilidades .habilidades_lista h5:hover {
     color: #191919;
     background-color: #f5f5f5;
 }
@@ -361,7 +400,7 @@ header{
 /* Realizaremos los mismos ajustes que hicimos anteriormente en la sección de habilidades, dado que van juntas y deben tener la misma armonía visual*/
 
 /* Ajustamos el contenedor y ponemos un espaciado lateral de 128px */
-.habilidades-servicios{
+.habilidades-servicios {
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
@@ -369,7 +408,7 @@ header{
 }
 
 /* Ajustamos el contenedor de las habilidades, dandole un tamaño de 700px de ancho y un espaciado de 64px entre cada elemento, en este caso entre el contenedor de la palabra skills y el que contiene la lista de habilidades*/
-.habilidades-servicios .servicios{
+.habilidades-servicios .servicios {
     display: flex;
     flex-direction: column;
     width: 700px;
@@ -378,25 +417,27 @@ header{
 }
 
 /* Ajustamos el texto de "Skill", cambiándole el color y el tamaño*/
-.servicios_titulo h2{
+.servicios_titulo h2 {
     font-size: 56px;
     color: #f5f5f5;
 }
+
 /* Ajustamos la lista de habilidades y le damos un espaciado de 24px entre cada elemento de la lista*/
-.habilidades-servicios .servicios .servicios_lista{
+.habilidades-servicios .servicios .servicios_lista {
     display: flex;
     flex-direction: column;
     gap: 24px;
 }
 
 /* Cambiamos el color, grosor y tamaño de texto de la lista de Habilidades*/
-.habilidades-servicios .servicios .servicios_lista h5{
+.habilidades-servicios .servicios .servicios_lista h5 {
     color: #f5f5f5;
     font-weight: 400;
     font-size: 20px;
 }
+
 /* Animamos el text para que cambie el fondo cuando pasamos el cursor por enicma */
-.habilidades-servicios .servicios .servicios_lista h5:hover{
+.habilidades-servicios .servicios .servicios_lista h5:hover {
     color: #191919;
     background-color: #f5f5f5;
 }
@@ -407,145 +448,196 @@ header{
 /* Para tablets (>=768px y <=1024px) */
 @media (max-width: 1024px) {
     .habilidades-servicios {
-        flex-direction: column; /* Cambia a disposición en columna */
-        padding: 64px; /* Reduce el padding lateral */
-        gap: 64px; /* Reduce el espaciado entre las secciones */
+        flex-direction: column;
+        /* Cambia a disposición en columna */
+        padding: 64px;
+        /* Reduce el padding lateral */
+        gap: 64px;
+        /* Reduce el espaciado entre las secciones */
     }
 
     .habilidades-servicios .habilidades,
     .habilidades-servicios .servicios {
-        width: 100%; /* Ocupa todo el ancho disponible */
-        gap: 48px; /* Reduce el espaciado interno */
+        width: 100%;
+        /* Ocupa todo el ancho disponible */
+        gap: 48px;
+        /* Reduce el espaciado interno */
     }
 
     .habilidades_titulo h2,
     .servicios_titulo h2 {
-        font-size: 48px; /* Reduce el tamaño de los títulos */
+        font-size: 48px;
+        /* Reduce el tamaño de los títulos */
     }
 }
 
 /* Para móviles (<=768px) */
 @media (max-width: 768px) {
     .habilidades-servicios {
-        padding: 32px; /* Menor padding para pantallas pequeñas */
-        gap: 32px; /* Reduce el espacio entre las secciones */
+        padding: 32px;
+        /* Menor padding para pantallas pequeñas */
+        gap: 32px;
+        /* Reduce el espacio entre las secciones */
     }
 
     .habilidades-servicios .habilidades,
     .habilidades-servicios .servicios {
-        gap: 32px; /* Ajusta el espaciado interno */
+        gap: 32px;
+        /* Ajusta el espaciado interno */
     }
 
     .habilidades_titulo h2,
     .servicios_titulo h2 {
-        font-size: 36px; /* Ajusta el tamaño del título */
+        font-size: 36px;
+        /* Ajusta el tamaño del título */
     }
 
     .habilidades-servicios .habilidades .habilidades_lista h5,
     .habilidades-servicios .servicios .servicios_lista h5 {
-        font-size: 18px; /* Tamaño de fuente más pequeño */
+        font-size: 18px;
+        /* Tamaño de fuente más pequeño */
     }
 }
 
 /* Para móviles pequeños (<=375px) */
 @media (max-width: 375px) {
     .habilidades-servicios {
-        padding: 16px; /* Padding aún más reducido */
+        padding: 16px;
+        /* Padding aún más reducido */
     }
 
     .habilidades_titulo h2,
     .servicios_titulo h2 {
-        font-size: 28px; /* Títulos aún más pequeños */
+        font-size: 28px;
+        /* Títulos aún más pequeños */
     }
 
     .habilidades-servicios .habilidades .habilidades_lista h5,
     .habilidades-servicios .servicios .servicios_lista h5 {
-        font-size: 16px; /* Texto más pequeño para listas */
+        font-size: 16px;
+        /* Texto más pequeño para listas */
     }
 }
 
 /* --- Sección de Proyectos --- */
 .proyectos {
-    display: flex; /* Flexbox para centrar elementos */
-    align-items: center; /* Centrado vertical */
-    justify-content: center; /* Centrado horizontal */
-    width: 100%; /* Ocupa todo el ancho */
-    height: min-content; /* Ajusta la altura según el contenido */
-    padding: 128px; /* Espaciado interno */
+    display: flex;
+    /* Flexbox para centrar elementos */
+    align-items: center;
+    /* Centrado vertical */
+    justify-content: center;
+    /* Centrado horizontal */
+    width: 100%;
+    /* Ocupa todo el ancho */
+    height: min-content;
+    /* Ajusta la altura según el contenido */
+    padding: 128px;
+    /* Espaciado interno */
 }
 
 .proyectos_titulo {
-    display: flex; /* Colocamos elementos en fila */
-    gap: 24px; /* Espaciado entre elementos */
-    width: 100%; /* Ocupa todo el ancho */
+    display: flex;
+    /* Colocamos elementos en fila */
+    gap: 24px;
+    /* Espaciado entre elementos */
+    width: 100%;
+    /* Ocupa todo el ancho */
 }
 
 .proyectos_titulo h2 {
-    color: #f5f5f5; /* Color claro para el texto */
-    font-size: 56px; /* Tamaño del título */
+    color: #f5f5f5;
+    /* Color claro para el texto */
+    font-size: 56px;
+    /* Tamaño del título */
 }
 
 /* Contenedor del proyecto "homi" */
 .homi {
-    display: grid; /* Usamos diseño de grilla */
-    flex: none; /* No permite flexibilidad */
-    gap: 40px; /* Espaciado entre elementos */
-    height: min-content; /* Ajusta altura según el contenido */
-    padding: 0 0 126px 0; /* Espaciado interno inferior */
-    position: relative; /* Relativo para ajustes internos */
-    width: 100%; /* Ocupa todo el ancho */
+    display: grid;
+    /* Usamos diseño de grilla */
+    flex: none;
+    /* No permite flexibilidad */
+    gap: 40px;
+    /* Espaciado entre elementos */
+    height: min-content;
+    /* Ajusta altura según el contenido */
+    padding: 0 0 126px 0;
+    /* Espaciado interno inferior */
+    position: relative;
+    /* Relativo para ajustes internos */
+    width: 100%;
+    /* Ocupa todo el ancho */
 }
 
 /* Contenedor de la imagen del proyecto */
 .homi_img {
-    display: contents; /* Renderizamos solo el contenido */
+    display: contents;
+    /* Renderizamos solo el contenido */
 }
 
 /* Estilo de la imagen del proyecto */
 .homi_img img {
-    display: block; /* Se muestra como un bloque */
-    max-width: 1440px; /* Ancho máximo */
+    display: block;
+    /* Se muestra como un bloque */
+    max-width: 1440px;
+    /* Ancho máximo */
 }
 
 .homi_img img:hover {
-    filter: brightness(0.75); /* Oscurecemos al pasar el mouse */
+    filter: brightness(0.75);
+    /* Oscurecemos al pasar el mouse */
 }
 
 /* Información del proyecto */
 .homi_info {
-    display: flex; /* Diseño en columna */
+    display: flex;
+    /* Diseño en columna */
     flex-direction: column;
-    height: min-content; /* Ajusta altura al contenido */
+    height: min-content;
+    /* Ajusta altura al contenido */
 }
 
 .homi_info h3 {
-    color: #f5f5f5; /* Color claro */
-    font-size: 24px; /* Tamaño del título */
+    color: #f5f5f5;
+    /* Color claro */
+    font-size: 24px;
+    /* Tamaño del título */
 }
 
 .homi_info h4 {
-    color: rgba(245, 245, 245, 0.75); /* Color semitransparente */
-    font-size: 18px; /* Tamaño del subtítulo */
-    font-weight: 400; /* Texto normal */
+    color: rgba(245, 245, 245, 0.75);
+    /* Color semitransparente */
+    font-size: 18px;
+    /* Tamaño del subtítulo */
+    font-weight: 400;
+    /* Texto normal */
 }
 
 /* Lista de proyectos */
 .proyectos_lista {
-    display: flex; /* Flexbox para diseño en fila */
-    flex-wrap: wrap; /* Permite ajustar elementos en filas */
-    gap: 36px; /* Espaciado entre elementos */
-    max-width: 1440px; /* Ancho máximo */
+    display: flex;
+    /* Flexbox para diseño en fila */
+    flex-wrap: wrap;
+    /* Permite ajustar elementos en filas */
+    gap: 36px;
+    /* Espaciado entre elementos */
+    max-width: 1440px;
+    /* Ancho máximo */
 }
 
 /* Estilo de las imágenes en la lista de proyectos */
 .proyectos_img img {
-    width: 700px; /* Ancho fijo */
-    height: 700px; /* Altura fija */
-    background-color: #f5cf8e; /* Color de fondo */
+    width: 700px;
+    /* Ancho fijo */
+    height: 700px;
+    /* Altura fija */
+    background-color: #f5cf8e;
+    /* Color de fondo */
 }
 
 .proyectos_img img:hover {
-    filter: brightness(0.75); /* Oscurecemos al pasar el mouse */
+    filter: brightness(0.75);
+    /* Oscurecemos al pasar el mouse */
 }
 
 /* Estilo de información de proyectos individuales */
@@ -624,39 +716,52 @@ header{
 /* --- Media Queries para la sección de Proyectos --- */
 @media (max-width: 1024px) {
     .proyectos {
-        padding: 64px; /* Reducimos el padding */
+        padding: 64px;
+        /* Reducimos el padding */
     }
 
     .homi_img img {
-        width: 100%; /* Imagen ocupa todo el ancho */
-        padding: 36px 0 0 0; /* Espaciado superior */
+        width: 100%;
+        /* Imagen ocupa todo el ancho */
+        padding: 36px 0 0 0;
+        /* Espaciado superior */
     }
 
     .proyectos_titulo h2 {
-        font-size: 48px; /* Tamaño más pequeño del título */
+        font-size: 48px;
+        /* Tamaño más pequeño del título */
     }
 
     .proyectos_lista {
-        flex-direction: column; /* Cambiamos a diseño en columna */
-        align-items: center; /* Centramos elementos */
-        justify-content: center; /* Centramos verticalmente */
-        gap: 36px; /* Espaciado entre elementos */
+        flex-direction: column;
+        /* Cambiamos a diseño en columna */
+        align-items: center;
+        /* Centramos elementos */
+        justify-content: center;
+        /* Centramos verticalmente */
+        gap: 36px;
+        /* Espaciado entre elementos */
     }
 
     .proyectos_img img {
-        width: 100%; /* Ancho dinámico */
-        height: auto; /* Altura automática */
+        width: 100%;
+        /* Ancho dinámico */
+        height: auto;
+        /* Altura automática */
     }
 
     .homi {
-        gap: 12px; /* Menor espaciado entre elementos */
-        padding: 0 0 36px 0; /* Reducimos el padding inferior */
+        gap: 12px;
+        /* Menor espaciado entre elementos */
+        padding: 0 0 36px 0;
+        /* Reducimos el padding inferior */
     }
 }
 
 @media (max-width: 768px) {
     .proyectos {
-        padding: 32px; /* Padding más reducido */
+        padding: 32px;
+        /* Padding más reducido */
     }
 
     .homi_img img {
@@ -665,7 +770,8 @@ header{
     }
 
     .proyectos_titulo h2 {
-        font-size: 36px; /* Reducimos más el tamaño del título */
+        font-size: 36px;
+        /* Reducimos más el tamaño del título */
     }
 
     .proyectos_lista {
@@ -697,7 +803,8 @@ header{
     }
 
     .proyectos_titulo h2 {
-        font-size: 28px; /* Tamaño mínimo del título */
+        font-size: 28px;
+        /* Tamaño mínimo del título */
     }
 
     .proyectos_lista {
@@ -718,18 +825,20 @@ header{
     }
 
     .homi_info h3 {
-        font-size: 18px; /* Ajustamos el tamaño del título */
+        font-size: 18px;
+        /* Ajustamos el tamaño del título */
     }
 
     .homi_info h4 {
-        font-size: 14px; /* Ajustamos el tamaño del subtítulo */
+        font-size: 14px;
+        /* Ajustamos el tamaño del subtítulo */
     }
 }
 
 
 /* PROYECTOS LISTA*/
 /* Ajustamos la lista de proyectos */
-.proyectos_lista{
+.proyectos_lista {
     display: flex;
     flex-wrap: wrap;
     gap: 36px;
@@ -737,86 +846,86 @@ header{
 }
 
 /* Adaptamos las imágenes */
-.proyectos_img img{
+.proyectos_img img {
     width: 700px;
     height: 700px;
     background-color: #f5cf8e;
 }
 
 /* Animamos las imágenes */
-.proyectos_img img:hover{
+.proyectos_img img:hover {
     filter: brightness(0.75);
 }
 
 
 /* Adaptamos los textos de cada proyecto */
 /* JUNIOR */
-.junior_info{
+.junior_info {
     display: flex;
     flex-direction: column;
     height: min-content;
 }
 
-.junior_info h3{
+.junior_info h3 {
     color: #f5f5f5;
     font-size: 18px;
 }
 
-.junior_info h4{
+.junior_info h4 {
     color: rgba(245, 245, 245, 0.75);
     font-size: 14px;
     font-weight: 400;
 }
 
 /* Sello Rojo */
-.sellorojo_info{
+.sellorojo_info {
     display: flex;
     flex-direction: column;
     height: min-content;
 }
 
-.sellorojo_info h3{
+.sellorojo_info h3 {
     color: #f5f5f5;
     font-size: 18px;
 }
 
-.sellorojo_info h4{
+.sellorojo_info h4 {
     color: rgba(245, 245, 245, 0.75);
     font-size: 14px;
     font-weight: 400;
 }
 
 /* Focus */
-.focus_info{
+.focus_info {
     display: flex;
     flex-direction: column;
     height: min-content;
 }
 
-.focus_info h3{
+.focus_info h3 {
     color: #f5f5f5;
     font-size: 18px;
 }
 
-.focus_info h4{
+.focus_info h4 {
     color: rgba(245, 245, 245, 0.75);
     font-size: 14px;
     font-weight: 400;
 }
 
 /* Carralero */
-.carralero_info{
+.carralero_info {
     display: flex;
     flex-direction: column;
     height: min-content;
 }
 
-.carralero_info h3{
+.carralero_info h3 {
     color: #f5f5f5;
     font-size: 18px;
 }
 
-.carralero_info h4{
+.carralero_info h4 {
     color: rgba(245, 245, 245, 0.75);
     font-size: 14px;
     font-weight: 400;
@@ -898,7 +1007,7 @@ header{
         padding: 32px;
     }
 
-    .homi_img img{
+    .homi_img img {
         width: 100%;
         padding: 36px 0 0 0;
     }
@@ -924,11 +1033,11 @@ header{
         padding: 0 0 36px 0;
     }
 
-    .homi_info h3{
+    .homi_info h3 {
         font-size: 18px;
     }
 
-    .homi_info h4{
+    .homi_info h4 {
         font-size: 14px;
     }
 }
@@ -936,33 +1045,33 @@ header{
 
 
 /* SECCIÓN DE CONTACTO */
-  
-  /* Encabezado de la sección */
-  .encabezado-seccion {
+
+/* Encabezado de la sección */
+.encabezado-seccion {
     text-align: center;
     padding: 40px 0;
     font-size: 56px;
     color: #f5f5f5;
-  }
-  
-  /* Contenedor principal de contacto */
-  .envoltura-contacto {
+}
+
+/* Contenedor principal de contacto */
+.envoltura-contacto {
     display: flex;
     align-items: center;
     justify-content: center;
     margin: 0 auto;
     padding: 20px;
     max-width: 1440px;
-  }
-  
-  /* Formulario de contacto */
-  .formulario-horizontal {
+}
+
+/* Formulario de contacto */
+.formulario-horizontal {
     width: 50%;
     font-weight: 400;
-  }
-  
-  .control-formulario,
-  textarea {
+}
+
+.control-formulario,
+textarea {
     width: 100%;
     background-color: #191919;
     color: #f5f5f5;
@@ -971,13 +1080,13 @@ header{
     border: 1px solid #f5f5f5;
     letter-spacing: 1px;
     border-radius: 5px;
-  }
-  
-  textarea {
+}
+
+textarea {
     resize: vertical;
-  }
-  
-  .boton-enviar {
+}
+
+.boton-enviar {
     width: 100%;
     background-color: #191919;
     color: #f5f5f5;
@@ -989,169 +1098,210 @@ header{
     border-radius: 5px;
     cursor: pointer;
     transition: background-color 0.3s ease;
-  }
-  
-  .boton-enviar:hover {
+}
+
+.boton-enviar:hover {
     background-color: #f5f5f5;
     color: #191919;
-  }
-  
-  .boton-alt-enviar{
+}
+
+.boton-alt-enviar {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 16px;
-  }
-  
-  
-  /* Media queries para pantallas pequeñas */
-  @media screen and (max-width: 1024px) {
+}
+
+
+/* Media queries para pantallas pequeñas */
+@media screen and (max-width: 1024px) {
     .envoltura-contacto {
-      flex-direction: column;
-      align-items: center;
+        flex-direction: column;
+        align-items: center;
     }
 
-    .encabezado-seccion{
+    .encabezado-seccion {
         font-size: 48px;
     }
 
-  }
-  
-  @media screen and (max-width: 768px) {
+}
+
+@media screen and (max-width: 768px) {
+
     .control-formulario,
     textarea {
-      width: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
-    .encabezado-seccion{
+    .encabezado-seccion {
         font-size: 36px;
     }
 
-  }
-  
-  @media screen and (max-width: 375px) {
+}
+
+@media screen and (max-width: 375px) {
     .envoltura-contacto {
         flex-direction: column;
         align-items: center;
         width: 300px;
         padding: 0;
-      }
-
-    .boton-enviar {
-      width: 99%;
     }
 
-    .encabezado-seccion{
+    .boton-enviar {
+        width: 99%;
+    }
+
+    .encabezado-seccion {
         font-size: 28px;
     }
 
-  }
-  
+}
+
 /* SECCIÓN FOOTER*/
 /* Ajustamos el tamaño del contenedor del footer */
-.footer{
-    margin-top: 40px; /* Añade un margen superior de 40px */
-    padding: 80px; /* Aplica un padding de 80px en todos los lados */
-    max-width: 1440px; /* Define el ancho máximo del footer a 1440px */
-    border: #f5f5f5 1px solid; /* Establece un borde de 1px de color gris claro (#f5f5f5) */
+.footer {
+    margin-top: 40px;
+    /* Añade un margen superior de 40px */
+    padding: 80px;
+    /* Aplica un padding de 80px en todos los lados */
+    max-width: 1440px;
+    /* Define el ancho máximo del footer a 1440px */
+    width: 100%;
+    /* Hacemos que el footer ocupe el ancho máximo */
+    border: #f5f5f5 solid;
+    /* Define un borde de color blanco y solido */
+    border-width: 1px 0 0 0;
+    /* Define el grosor de borde, en este caso 1px en el borde superior */
+    justify-self: center;
+    /*Hacemos que el footer se centre en el medio de la página */
 }
 
 /* Establece el diseño de la fila del footer */
-.fila-footer{
-    display: flex; /* Utiliza Flexbox para el contenedor */
-    flex-wrap: wrap; /* Permite que los elementos se acomoden en varias filas si es necesario */
-    justify-content: space-between; /* Distribuye el espacio entre los elementos de forma equitativa */
+.fila-footer {
+    display: flex;
+    /* Utiliza Flexbox para el contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos se acomoden en varias filas si es necesario */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos de forma equitativa */
 }
 
 /* Define el estilo de los encabezados en las columnas del footer */
-.fila-footer h4{
-    font-size: 18px; /* Define el tamaño de la fuente en 18px */
-    color: #f5f5f5; /* Establece el color del texto en gris claro */
+.fila-footer h4 {
+    font-size: 18px;
+    /* Define el tamaño de la fuente en 18px */
+    color: #f5f5f5;
+    /* Establece el color del texto en gris claro */
 }
 
 /* Establece el estilo de las columnas dentro del footer */
-.columna-footer{
-    width: 30%; /* Define el ancho de las columnas al 30% */
-    padding: 0 15px; /* Aplica un padding horizontal de 15px en cada lado */
+.columna-footer {
+    width: 30%;
+    /* Define el ancho de las columnas al 30% */
+    padding: 0 15px;
+    /* Aplica un padding horizontal de 15px en cada lado */
 }
 
 /* Establece los estilos de las listas dentro de las columnas */
-.columna-footer ul{
-    list-style: none; /* Elimina los estilos de lista (como los puntos) */
+.columna-footer ul {
+    list-style: none;
+    /* Elimina los estilos de lista (como los puntos) */
 }
 
 /* Define los estilos de los enlaces dentro del footer */
-.columna-footer a{
-    text-decoration: none; /* Elimina el subrayado de los enlaces */
-    color: #f5f5f5; /* Establece el color de los enlaces en gris claro */
-    font-size: 14px; /* Define el tamaño de la fuente en 14px */
+.columna-footer a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: #f5f5f5;
+    /* Establece el color de los enlaces en gris claro */
+    font-size: 14px;
+    /* Define el tamaño de la fuente en 14px */
 }
 
 /* Establece los estilos de los enlaces al pasar el mouse sobre ellos */
-.columna-footer a:hover{
-    color: #f9ca34; /* Cambia el color a un tono amarillo (#f9ca34) al pasar el mouse */
+.columna-footer a:hover {
+    color: #f9ca34;
+    /* Cambia el color a un tono amarillo (#f9ca34) al pasar el mouse */
 }
 
 /* Establece el diseño de la sección de redes sociales en el footer */
 .redessociales-footer {
-    display: flex; /* Utiliza Flexbox para alinear los iconos */
-    gap: 24px; /* Define un espacio de 24px entre los iconos */
-    padding-top: 8px; /* Aplica un padding superior de 8px */
+    display: flex;
+    /* Utiliza Flexbox para alinear los iconos */
+    gap: 24px;
+    /* Define un espacio de 24px entre los iconos */
+    padding-top: 8px;
+    /* Aplica un padding superior de 8px */
 }
 
 /* Define el tamaño de los iconos de redes sociales */
-.redessociales-footer i{
-    font-size: 30px; /* Define el tamaño de los iconos a 30px */
+.redessociales-footer i {
+    font-size: 30px;
+    /* Define el tamaño de los iconos a 30px */
 }
 
-/* MEDIA QUERIES FOOTER*/ 
+/* MEDIA QUERIES FOOTER*/
 
 /* --- Media Queries para pantallas de máximo 1024px --- */
 @media (max-width: 1024px) {
     .footer {
-        padding: 70px 50px; /* Ajusta el padding */
-        
+        padding: 70px 50px;
+        /* Ajusta el padding */
+
     }
 
     .fila-footer {
-        flex-direction: row; /* Mantiene la dirección de fila */
-        justify-content: space-around; /* Ajusta el espacio entre las columnas */
+        flex-direction: row;
+        /* Mantiene la dirección de fila */
+        justify-content: space-around;
+        /* Ajusta el espacio entre las columnas */
     }
 
     .columna-footer {
-        width: 30%; /* Mantiene el 30% de ancho */
+        width: 30%;
+        /* Mantiene el 30% de ancho */
         padding: 0 15px;
     }
 
     .redessociales-footer {
-        gap: 24px; /* Mantiene el mismo espacio entre los iconos */
+        gap: 24px;
+        /* Mantiene el mismo espacio entre los iconos */
     }
 
     .redessociales-footer i {
-        font-size: 30px; /* Mantiene el tamaño original de los iconos */
+        font-size: 30px;
+        /* Mantiene el tamaño original de los iconos */
     }
 }
 
 /* --- Media Queries para pantallas de máximo 768px --- */
 @media (max-width: 768px) {
     .footer {
-        padding: 60px 40px; /* Ajusta el padding */
+        padding: 60px 40px;
+        /* Ajusta el padding */
     }
 
     .columna-footer {
         width: AUTO;
-        padding: 10px 0; /* Ajusta el padding */
+        padding: 16px;
+        /* Ajusta el padding */
+    }
+
+    .fila-footer {
+        justify-content: start;
     }
 
     .redessociales-footer {
-        gap: 20px; /* Ajusta el espacio entre los iconos */
+        gap: 20px;
+        /* Ajusta el espacio entre los iconos */
     }
 
     .redessociales-footer i {
-        font-size: 28px; /* Ajusta el tamaño de los iconos */
+        font-size: 28px;
+        /* Ajusta el tamaño de los iconos */
     }
 }
 
@@ -1160,25 +1310,31 @@ header{
     .footer {
         display: flex;
         flex-direction: column;
-        align-items:center ;
-        padding: 40px 20px; /* Reduce el padding */
+        align-items: center;
+        padding: 40px 20px;
+        /* Reduce el padding */
 
     }
 
     .fila-footer {
-        flex-direction: column; /* Cambia la dirección de los elementos a columna */
+        flex-direction: column;
+        /* Cambia la dirección de los elementos a columna */
     }
 
     .columna-footer {
-        width: 100%; /* Las columnas ocupan el 100% del ancho */
-        padding: 10px 0; /* Ajusta el padding */
+        width: 100%;
+        /* Las columnas ocupan el 100% del ancho */
+        padding: 10px 0;
+        /* Ajusta el padding */
     }
 
     .redessociales-footer {
-        gap: 16px; /* Reduce el espacio entre los iconos */
+        gap: 16px;
+        /* Reduce el espacio entre los iconos */
     }
 
     .redessociales-footer i {
-        font-size: 24px; /* Ajusta el tamaño de los iconos */
+        font-size: 24px;
+        /* Ajusta el tamaño de los iconos */
     }
 }

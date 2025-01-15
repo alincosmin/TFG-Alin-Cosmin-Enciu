@@ -1,0 +1,712 @@
+/* Importamos la fuente de Poppins de la web de Google Fonts*/
+@import url('https://fonts.googleapis.com/css2?family=Bungee+Spice&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    /* Eliminamos márgenes por defecto */
+    padding: 0;
+    /* Eliminamos paddings por defecto */
+    box-sizing: border-box;
+    /* Incluimos el padding y border dentro del tamaño total de los elementos */
+    font-family: 'Poppins', sans-serif;
+    /* Aplicamos la fuente por defecto */
+}
+
+body {
+    height: 100vh;
+    /* Ajustamos la altura del body al 100% del viewport */
+    background-color: #191919;
+    /* Fondo oscuro para mejor contraste */
+}
+
+.navbar li {
+    list-style: none;
+    /* Eliminamos los estilos de las listas de la barra de navegación*/
+}
+
+.logo img {
+    width: 50px;
+}
+
+header a {
+    text-decoration: none;
+    /* Eliminamos los tilos de los enlaces de la barra de navegación*/
+    color: #f5f5f5;
+    font-size: 12pt;
+}
+
+/* Animamos los enlaces de la barra de navegación, para que al estar en modo hover y en active cambien de color */
+.enlaces a:hover {
+    color: #f9ca34;
+}
+
+.enlaces a:active {
+    color: #f9ca34;
+}
+
+/* HEADER RESPONSIVE*/
+header {
+    position: relative;
+    padding: 0 36px;
+}
+
+/* Haremos que la barra de navegación sea responsive y este centrada. Mediante Flexbox organizamos los elementos con espacio entre ellos */
+.navbar {
+    width: 100%;
+    height: 60px;
+    max-width: 1440px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 16px;
+}
+
+/* Organizamos los enlaces a las págnias, posicionándolos en fila y con un espacio de 36px entre ellos */
+.navbar .enlaces {
+    display: flex;
+    gap: 36px;
+    align-items: center;
+
+}
+
+/* Cambiamos el color y el tamaño del botón, del menu, de la versión mobile */
+.navbar .menu_btn {
+    color: whitesmoke;
+    font-size: 24px;
+    cursor: pointer;
+    /*Cambiamos el cursos al hacer hover sobre este elemento*/
+    display: none;
+    /*Lo ocultamos para la versión de ordenador */
+}
+
+/* Decoramos el botón de contacto. Animaremos el botón para que cambie de color y de tamaño al estar en modo hover y active*/
+.cotacto_btn {
+    color: whitesmoke;
+    padding: 8px 16px;
+    border: solid;
+    border-width: 2px;
+    /*Grosor bordes*/
+    outline: none;
+    border-radius: 20px;
+    /*Bordes redondeados*/
+    font-size: 14px;
+    font-weight: bold;
+    /*Ponemos negrita*/
+    cursor: pointer;
+    /*Cambiamos el cursos al hacer hover sobre este elemento*/
+    transition: scale 0.2 ease;
+    /* Esto aplica una transición para el cambio de tamaño (escala) de los botones. La duración es de 0,2 segundos, y el valor ease hace que la animación comience rápida, pero desacelere progresivamente hacia el final. */
+}
+
+.cotacto_btn:hover {
+    background-color: whitesmoke;
+    color: #191919;
+    scale: 1.05;
+    /* El botón aumenta su tamaño al estar en hover */
+}
+
+.cotacto_btn:active {
+    scale: 0.95;
+    /* El botón reduce su tamaño al estar en activo, en este caso al hacer click */
+}
+
+/* MOBILE MENU*/
+.mobile_menu {
+    display: none;
+    position: absolute;
+    /* Con el comando absoule más right y top, haremos que el elemento se posicione de x manera respecto al contenedor más cercano, en este caso el icono de menú (las tres barras)*/
+    right: 36px;
+    top: 60px;
+    height: 0;
+    width: 300px;
+    background: rgba(249, 202, 52, 0.5);
+    /*Fondo con transparencia*/
+    backdrop-filter: blur(15px);
+    /* Hacemos que lo haya detrás del fondo se difumine*/
+    border-radius: 10px;
+    overflow: hidden;
+    /* Hacemos que el contenido que está desbordado no se muestre. Además de ocultar las barras de desplazamento del navegador */
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    /* Transición de cambio de altura, con duración de 0,2 segundos y la curva de acceleración personalizada */
+}
+
+.mobile_menu.open {
+    height: auto;
+}
+
+/* Estilizamos los elementos del menú*/
+.mobile_menu li {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/*Hacemos que el botón de contacto ocupe el contenedor entero, sea responsive gracias a flex y centre el texto*/
+.mobile_menu .cotacto_btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+/* RESPONSIVE NAVBAR *
+
+/* Las reglas CSS dentro de este bloque se aplicarán solo cuando el ancho de la pantalla sea 992px o menor*/
+@media (max-width: 992px) {
+
+    /* Ocultamos los enlaces y el botón de contacto */
+    .navbar .enlaces,
+    .navbar .cotacto_btn {
+        display: none;
+    }
+
+    /* Mostramos el icono de barras, que sustituirá a los elementos previamente ocultos */
+    .navbar .menu_btn {
+        display: block;
+    }
+
+    .mobile_menu {
+        display: block;
+    }
+}
+
+@media (max-width: 576px) {
+    .mobile_menu {
+        left: 36px;
+        width: unset;
+    }
+}
+
+/* PROYECTOS */
+/* Hacemos que la sección introductoria del proyecto se vea estética */
+.intro-proyecto {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    align-items: flex-start;
+    margin: 120px 0;
+    padding: 48px 36px;
+    border: #f5f5f5 solid;
+    border-width: 1px 0 0 0;
+    gap: 20%;
+}
+
+/* Estilos del nombre del proyecto */
+.nombre-proyecto {
+    color: #f5f5f5;
+}
+
+.nombre-proyecto h2 {
+    font-size: 96px;
+    /* Texto principal grande */
+}
+
+.nombre-proyecto h4 {
+    font-size: 32px;
+    /* Subtítulo más pequeño */
+}
+
+/* Estilos de la información del proyecto */
+.info-proyecto {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f5f5f5;
+}
+
+.info-proyecto p {
+    padding: 24px 0 0 0;
+    /* Espaciado superior */
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    .intro-proyecto {
+        flex-direction: column;
+        /* Apilamos los elementos */
+        align-items: center;
+        gap: 40px;
+        /* Espaciado entre bloques */
+        padding: 24px 32px;
+        /* Reducimos los márgenes */
+    }
+
+    .nombre-proyecto h2 {
+        font-size: 64px;
+        /* Reducimos el tamaño del título */
+        text-align: center;
+    }
+
+    .nombre-proyecto h4 {
+        font-size: 24px;
+        /* Ajustamos el subtítulo */
+        text-align: center;
+    }
+
+    .info-proyecto {
+        text-align: center;
+        /* Centrar texto */
+        gap: 16px;
+        /* Más espacio entre textos */
+    }
+}
+
+@media (max-width: 768px) {
+    .intro-proyecto {
+        margin: 80px 0;
+        /* Reducimos márgenes */
+        padding: 16px;
+        /* Más compacto */
+    }
+
+    .nombre-proyecto h2 {
+        font-size: 48px;
+        /* Texto aún más pequeño */
+    }
+
+    .nombre-proyecto h4 {
+        font-size: 20px;
+    }
+
+    .info-proyecto p {
+        padding: 16px 0 0 0;
+        /* Ajustamos el espaciado */
+    }
+}
+
+@media (max-width: 480px) {
+    .nombre-proyecto h2 {
+        font-size: 36px;
+        /* Más pequeño para móviles */
+    }
+
+    .nombre-proyecto h4 {
+        font-size: 18px;
+    }
+
+    .info-proyecto p {
+        padding: 12px 0 0 0;
+    }
+}
+
+/* CARRUSEL */
+/* Contenedor principal del carrusel */
+.contenedor-carrusel {
+    width: 1300px; /* Anchura fija */
+    max-width: 100vw; /* Se adapta al ancho de la pantalla */
+    height: 700px; /* Altura fija */
+    margin: auto; /* Centrado horizontal */
+    position: relative; /* Para posicionar elementos hijos */
+    overflow: hidden; /* Oculta contenido fuera del área visible */
+}
+
+/* Lista de imágenes en el carrusel */
+.contenedor-carrusel .lista {
+    position: absolute; /* Posicionamiento absoluto dentro del contenedor */
+    width: max-content; /* Tamaño en función del contenido */
+    height: 100%; /* Igual al contenedor */
+    left: 0; /* Alineado al borde izquierdo */
+    top: 0; /* Alineado al borde superior */
+    display: flex; /* Muestra elementos en fila */
+    transition: 1s; /* Animación suave para transiciones */
+}
+
+/* Estilo de las imágenes del carrusel */
+.contenedor-carrusel .lista img {
+    width: 1300px; /* Anchura fija */
+    max-width: 100vw; /* Ajusta el tamaño al viewport */
+    height: 100%; /* Altura igual al contenedor */
+    object-fit: contain; /* Escala y recorta la imagen para llenar el espacio */;
+
+}
+
+/* Contenedor de los botones de navegación */
+.contenedor-carrusel .botones {
+    position: absolute; /* Posicionamiento dentro del carrusel */
+    top: 45%; /* Centrado vertical aproximado */
+    left: 5%; /* Separación del borde izquierdo */
+    width: 90%; /* Anchura relativa */
+    display: flex; /* Acomoda los botones en fila */
+    justify-content: space-between; /* Espaciado entre botones */
+}
+
+/* Estilo de los botones de navegación */
+.contenedor-carrusel .botones button {
+    width: 50px; /* Tamaño cuadrado */
+    height: 50px;
+    border-radius: 50%; /* Forma circular */
+    background-color: #fff5; /* Fondo semitransparente */
+    color: #191919; /* Color del texto */
+    border: #191919 1px solid; /* Borde oscuro */
+    font-weight: bold; /* Texto en negrita */
+    font-size: 24px; /* Tamaño del texto */
+}
+
+/* Contenedor de los puntos de navegación */
+.contenedor-carrusel .puntos {
+    position: absolute; /* Posicionamiento en el carrusel */
+    bottom: 10px; /* Separación del borde inferior */
+    left: 0; /* Alineado al borde izquierdo */
+    color: #fff; /* Color del texto */
+    width: 100%; /* Ocupa todo el ancho */
+    margin: 0; /* Sin margen externo */
+    padding: 0; /* Sin padding */
+    display: flex; /* Elementos en fila */
+    justify-content: center; /* Centrado horizontal */
+}
+
+/* Estilo de los puntos */
+.contenedor-carrusel .puntos li {
+    list-style: none; /* Sin viñetas */
+    width: 10px; /* Tamaño circular pequeño */
+    height: 10px;
+    border: #191919 1px solid; /* Borde oscuro */
+    background-color: #fff; /* Fondo blanco */
+    margin: 10px; /* Espaciado entre puntos */
+    border-radius: 20px; /* Forma circular */
+    transition: 0.5s; /* Transición suave para cambios */
+}
+
+/* Estilo del punto activo */
+.contenedor-carrusel .puntos li.activo {
+    width: 30px; /* Punto activo más ancho */
+}
+
+/* Media Query para pantallas menores a 768px */
+@media screen and (max-width: 768px) {
+    .contenedor-carrusel {
+        width: 100%; /* Ocupa todo el ancho de la pantalla */
+        height: 400px; /* Altura reducida */
+    }
+    .contenedor-carrusel .lista img {
+        width: 100%; /* Imágenes adaptadas al ancho del contenedor */
+        object-fit: contain; /* Imágenes que cubren el contenedor */
+
+    }
+    .contenedor-carrusel .botones button {
+        width: 40px; /* Botones más pequeños */
+        height: 40px;
+        font-size: 20px; /* Texto reducido */
+    }
+    .contenedor-carrusel .puntos li {
+        width: 8px; /* Puntos más pequeños */
+        height: 8px;
+        margin: 8px;
+    }
+    .contenedor-carrusel .puntos li.activo {
+        width: 20px; /* Ancho ajustado para el punto activo */
+    }
+}
+
+/* Media Query para pantallas menores a 480px */
+@media screen and (max-width: 480px) {
+    .contenedor-carrusel {
+        height: 300px; /* Altura aún menor */
+    }
+    .contenedor-carrusel .lista img {
+        width: 100%; /* Imágenes adaptadas al ancho del contenedor */
+        object-fit: contain; /* Imágenes que cubren el contenedor */
+    }
+    .contenedor-carrusel .botones button {
+        width: 30px; /* Botones más pequeños */
+        height: 30px;
+        font-size: 16px; /* Tamaño de texto reducido */
+    }
+    .contenedor-carrusel .puntos li {
+        width: 6px; /* Puntos más pequeños */
+        height: 6px;
+        margin: 6px;
+    }
+    .contenedor-carrusel .puntos li.activo {
+        width: 15px; /* Ajuste del ancho activo */
+    }
+}
+
+/* Seccion de proceso */
+
+
+/* SECCIÓN FOOTER*/
+/* Ajustamos el tamaño del contenedor del footer */
+.footer {
+    margin-top: 40px;
+    /* Añade un margen superior de 40px */
+    padding: 80px;
+    /* Aplica un padding de 80px en todos los lados */
+    max-width: 1440px;
+    /* Define el ancho máximo del footer a 1440px */
+    width: 100%;
+    /* Hacemos que el footer ocupe el ancho máximo */
+    border: #f5f5f5 solid;
+    /* Define un borde de color blanco y solido */
+    border-width: 1px 0 0 0;
+    /* Define el grosor de borde, en este caso 1px en el borde superior */
+    justify-self: center;
+    /*Hacemos que el footer se centre en el medio de la página */
+}
+
+/* Establece el diseño de la fila del footer */
+.fila-footer {
+    display: flex;
+    /* Utiliza Flexbox para el contenedor */
+    flex-wrap: wrap;
+    /* Permite que los elementos se acomoden en varias filas si es necesario */
+    justify-content: space-between;
+    /* Distribuye el espacio entre los elementos de forma equitativa */
+}
+
+/* Define el estilo de los encabezados en las columnas del footer */
+.fila-footer h4 {
+    font-size: 18px;
+    /* Define el tamaño de la fuente en 18px */
+    color: #f5f5f5;
+    /* Establece el color del texto en gris claro */
+}
+
+/* Establece el estilo de las columnas dentro del footer */
+.columna-footer {
+    width: 30%;
+    /* Define el ancho de las columnas al 30% */
+    padding: 0 15px;
+    /* Aplica un padding horizontal de 15px en cada lado */
+}
+
+/* Establece los estilos de las listas dentro de las columnas */
+.columna-footer ul {
+    list-style: none;
+    /* Elimina los estilos de lista (como los puntos) */
+}
+
+/* Define los estilos de los enlaces dentro del footer */
+.columna-footer a {
+    text-decoration: none;
+    /* Elimina el subrayado de los enlaces */
+    color: #f5f5f5;
+    /* Establece el color de los enlaces en gris claro */
+    font-size: 14px;
+    /* Define el tamaño de la fuente en 14px */
+}
+
+/* Establece los estilos de los enlaces al pasar el mouse sobre ellos */
+.columna-footer a:hover {
+    color: #f9ca34;
+    /* Cambia el color a un tono amarillo (#f9ca34) al pasar el mouse */
+}
+
+/* Establece el diseño de la sección de redes sociales en el footer */
+.redessociales-footer {
+    display: flex;
+    /* Utiliza Flexbox para alinear los iconos */
+    gap: 24px;
+    /* Define un espacio de 24px entre los iconos */
+    padding-top: 8px;
+    /* Aplica un padding superior de 8px */
+}
+
+/* Define el tamaño de los iconos de redes sociales */
+.redessociales-footer i {
+    font-size: 30px;
+    /* Define el tamaño de los iconos a 30px */
+}
+
+/* MEDIA QUERIES FOOTER*/
+
+/* --- Media Queries para pantallas de máximo 1024px --- */
+@media (max-width: 1024px) {
+    .footer {
+        padding: 70px 50px;
+        /* Ajusta el padding */
+
+    }
+
+    .fila-footer {
+        flex-direction: row;
+        /* Mantiene la dirección de fila */
+        justify-content: space-around;
+        /* Ajusta el espacio entre las columnas */
+    }
+
+    .columna-footer {
+        width: 30%;
+        /* Mantiene el 30% de ancho */
+        padding: 0 15px;
+    }
+
+    .redessociales-footer {
+        gap: 24px;
+        /* Mantiene el mismo espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 30px;
+        /* Mantiene el tamaño original de los iconos */
+    }
+}
+
+/* --- Media Queries para pantallas de máximo 768px --- */
+@media (max-width: 768px) {
+    .footer {
+        padding: 60px 40px;
+        /* Ajusta el padding */
+    }
+
+    .columna-footer {
+        width: AUTO;
+        padding: 16px;
+        /* Ajusta el padding */
+    }
+
+    .fila-footer {
+        justify-content: start;
+    }
+
+    .redessociales-footer {
+        gap: 20px;
+        /* Ajusta el espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 28px;
+        /* Ajusta el tamaño de los iconos */
+    }
+}
+
+/* --- Media Queries para pantallas de máximo 375px --- */
+@media (max-width: 375px) {
+    .footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 20px;
+        /* Reduce el padding */
+
+    }
+
+    .fila-footer {
+        flex-direction: column;
+        /* Cambia la dirección de los elementos a columna */
+    }
+
+    .columna-footer {
+        width: 100%;
+        /* Las columnas ocupan el 100% del ancho */
+        padding: 10px 0;
+        /* Ajusta el padding */
+    }
+
+    .redessociales-footer {
+        gap: 16px;
+        /* Reduce el espacio entre los iconos */
+    }
+
+    .redessociales-footer i {
+        font-size: 24px;
+        /* Ajusta el tamaño de los iconos */
+    }
+}
+
+/* PROCESO */
+/* Hacemos que la sección introductoria del proyecto se vea estética */
+.proceso {
+    display: flex;
+    flex-direction: row;
+    max-width: 1440px;
+    width: 100%;
+    justify-self: center;
+    align-items: flex-start;
+    margin: 120px 0;
+    padding: 48px 36px;
+    border: #f5f5f5 solid;
+    border-width: 1px 0 0 0;
+    gap: 20%;
+}
+
+/* Estilos del nombre del proyecto */
+.titulo-proceso {
+    color: #f5f5f5;
+}
+
+.titulo-proceso h2 {
+    font-size: 48px;
+    /* Texto principal grande */
+}
+
+.pasos-proceso h4 {
+    font-size: 24px;
+    /* Subtítulo más pequeño */
+}
+
+/* Estilos de la información del proyecto */
+.pasos-proceso {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #f5f5f5;
+}
+
+.pasos-proceso p {
+    padding: 8px 0 32px 0;
+    /* Espaciado superior */
+}
+
+/* Ajustes responsive */
+@media (max-width: 1024px) {
+    .proceso {
+        flex-direction: column;
+        /* Apilamos los elementos */
+        align-items: center;
+        gap: 40px;
+        /* Espaciado entre bloques */
+        padding: 24px 32px;
+        /* Reducimos los márgenes */
+    }
+
+    .titulo-proceso h2 {
+        font-size: 48px;
+        /* Reducimos el tamaño del título */
+        text-align: center;
+    }
+
+    .pasos-proceso h4 {
+        font-size: 24px;
+        /* Ajustamos el subtítulo */
+        text-align: center;
+    }
+
+}
+
+@media (max-width: 768px) {
+    .proceso {
+        margin: 80px 0;
+        /* Reducimos márgenes */
+        padding: 24px;
+        /* Más compacto */
+    }
+
+    .titulo-proceso h2 {
+        font-size: 48px;
+        /* Texto aún más pequeño */
+    }
+
+    .pasos-proceso h4 {
+        font-size: 20px;
+    }
+
+}
+
+@media (max-width: 480px) {
+    .titulo-proceso h2 {
+        font-size: 36px;
+        /* Más pequeño para móviles */
+    }
+
+    .pasos-proceso h4 {
+        font-size: 18px;
+    }
+
+    .pasos-proceso p {
+        padding: 8px 0 32px 0;
+    }
+}

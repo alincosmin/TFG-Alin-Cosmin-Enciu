@@ -1338,3 +1338,68 @@ textarea {
         /* Ajusta el tamaño de los iconos */
     }
 }
+
+/* Botón volver Arriba */
+ 
+.go-top-container {
+    position: fixed;
+    bottom: 4rem;
+    right: 4rem;
+    width: 4.4rem;
+    height: 4.4rem;
+    z-index: -1;
+}
+ 
+.go-top-button {
+    width: 0rem;
+    height: 0rem;
+    background: whitesmoke;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: 0.2s;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+}
+ 
+.go-top-button i {
+    position: absolute;
+    font-size: 1.2rem;
+    top: 48%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    color: #191919;
+    transition: 0.2s;
+}
+ 
+.show {
+    z-index: 10;
+}
+ 
+.show .go-top-button {
+    animation: popup 0.3s ease-in-out;
+    width: 4.4rem;
+    height: 4.4rem;
+    z-index: 11;
+}
+ 
+.show i {
+    transform: translate(-50%, -50%) scale(1);
+}
+ 
+@keyframes popup {
+    0% {
+        width: 0;
+        height: 0;
+    }
+    50% {
+        width: 6rem;
+        height: 6rem;
+    }
+    100% {
+        width: 4.4rem;
+        height: 4.4rem;
+    }
+}

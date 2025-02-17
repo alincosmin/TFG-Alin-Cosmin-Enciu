@@ -7,21 +7,21 @@
     <title>SelloRojo</title>
 
     <!-- Vinculamos el documento con la hoja de estilos de css -->
-    <link rel="stylesheet" href="/css/style2.css">
+    <link rel="stylesheet" href="./css/style2.css">
     <!-- Vinculamos el documentos con la librería de font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
         integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <!-- Vinculamos el JS -->
-    <script src="/js/script.js"></script>
+
 
 </head>
 
 <body>
-    <!-- Creamos el header, aquí haremos un logo, una lista con 3 links de interés y un botón de contacto (Cuya acción será mandarnos a una página de contacto) -->
+    
+<!-- Creamos el header, aquí haremos un logo, una lista con 3 links de interés y un botón de contacto (Cuya acción será mandarnos a una página de contacto) -->
     <header>
         <div class="navbar">
-            <div class="logo"><a href="/index.html"><img src="/img/logo-gris.png" alt=""></a></div>
+            <div class="logo"><a href="/index.html"><img src="./img/logo-gris.png" alt="logo"></a></div>
             <ul class="enlaces">
                 <li class="inicio_li"><a href="/index.html#inicio">Inicio</a></li>
                 <li class="about_li"><a href="/index.html#about">About</a></li>
@@ -39,172 +39,191 @@
 
         <!-- Menu móvil -->
         <div class="mobile_menu">
-            <li class="inicio:li"><a href="/index.html#inicio">Inicio</a></li>
-            <li class="about_li"><a href="/index.html#about">About</a></li>
-            <li class="habilidades_li"><a href="/index.html#habilidades">Habilidades</a></li>
-            <li class="servicios_li"><a href="/index.html#servicios">Servicios</a></li>
-            <li class="proyectos_li"><a href="/index.html#proyectos">Proyectos</a></li>
-            <li><a href="/index.html#contacto" class="cotacto_btn">Contáctame</a></li>
+            <ul>
+                <li class="inicio:li"><a href="./index.html#inicio">Inicio</a></li>
+                <li class="about_li"><a href="./index.html#about">About</a></li>
+                <li class="habilidades_li"><a href="./index.html#habilidades">Habilidades</a></li>
+                <li class="servicios_li"><a href="./index.html#servicios">Servicios</a></li>
+                <li class="proyectos_li"><a href="./index.html#proyectos">Proyectos</a></li>
+                <li><a href="./index.html#contacto" class="cotacto_btn">Contáctame</a></li>
+            </ul>
         </div>
+
+        <!-- Script JavaScript para agregar funcionalidad al menú -->
+        <script src="/js/menumobile.js"></script>
+
     </header>
 
-    <!-- Código para el menú Mobile -->
-    <script>
-        // Seleccionamos el botón de menú (el contenedor de las barras)
-        const menu_btn = document.querySelector('.menu_btn')
+<!-- MAIN -->
+    <main class="contenido-main">
 
-        // Seleccionamos el icono dentro del botón de menú (el icono de las barras)
-        const menu_btnIcon = document.querySelector('.menu_btn i')
+        <!-- Hacemos la sección que serán dos container en línea, uno con el nombre del proyecto y otro con una pequeña descripción-->
 
-        // Seleccionamos el menú móvil (el contenedor que se mostrará u ocultará)
-        const mobile_menu = document.querySelector('.mobile_menu')
-
-        // Asignamos una función al evento de clic del botón de menú
-        menu_btn.onclick = function () {
-            // Alternamos la clase 'open' en el menú móvil. Si está abierta, la cerramos, si está cerrada, la abrimos.
-            mobile_menu.classList.toggle('open')
-
-            // Comprobamos si el menú tiene la clase 'open' (es decir, si está abierto)
-            const isOpen = mobile_menu.classList.contains('open')
-
-            // Cambiamos el icono en el botón de menú: 
-            // Si el menú está abierto, mostramos la 'X', si está cerrado, mostramos las barras
-            menu_btnIcon.classList = isOpen
-                ? 'fa-solid fa-xmark'  // Si el menú está abierto, mostramos la 'X'
-                : 'fa-solid fa-bars'   // Si el menú está cerrado, mostramos las barras
-        }
-    </script>
-
-    <!-- Hacemos la sección que serán dos container en línea, uno con el nombre del proyecto y otro con una pequeña descripción-->
-
-    <!-- INTRO PROYECTOS -->
-    <section class="intro-proyecto">
-        <!-- Contenedor del nombre del proyecto -->
-        <div class="nombre-proyecto">
-            <!-- Título del proyecto -->
-            <h2>Sello Rojo</h2>
-            <!-- Año del proyecto -->
-            <h4>2024</h4>
-        </div>
-        <!-- Contenedor con la información detallada del proyecto -->
-        <div class="info-proyecto">
-
-            <p>Sello Rojo me confió la creación de su nuevo manual de identidad, un proyecto esencial para fortalecer su legado y asegurar una representación coherente en todos los puntos de contacto con su audiencia. Esta tarea se convirtió en una oportunidad para explorar y plasmar la esencia de la marca, garantizando que cada detalle refleje su autenticidad y compromiso.
-            </p>
-
-            <p>El enfoque principal fue elaborar un manual que encapsulara los valores fundamentales de Sello Rojo: calidad, sostenibilidad y tradición. Este documento no solo establece directrices visuales claras, sino que también refuerza su presencia en el mercado, destacándola como un símbolo de excelencia dentro de la rica tradición cafetera colombiana.</p>
-            
-            <p>Este proyecto integral celebra la historia de Sello Rojo mientras impulsa su evolución. Desde el diseño hasta la implementación, cada elemento está diseñado para potenciar su impacto y consolidar su posición como un referente de confianza y calidad en la industria del café.</p>
-        </div>
-    </section>
-
-    <!-- CARRUSEL -->
-    <section class="contenedor-carrusel">
-        <!-- Contenedor principal del carrusel -->
-
-        <div class="lista">
-            <!-- Contenedor para las imágenes del carrusel -->
-
-            <div class="foto">
-                <!-- Cada imagen individual dentro del carrusel -->
-                <img src="/img/Sello Rojo/SelloRojo (1).png" alt="portada">
-                <!-- Imagen de portada del carrusel -->
-            </div> 
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (2).png" alt="pagina 1">
-                <!-- Primera página del carrusel -->
+        <!-- INTRO PROYECTOS -->
+        <section class="intro-proyecto">
+            <!-- Contenedor del nombre del proyecto -->
+            <div class="nombre-proyecto">
+                <!-- Título del proyecto -->
+                <h2>Sello Rojo</h2>
+                <!-- Año del proyecto -->
+                <h4>2024</h4>
             </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (3).png" alt="pagina 2">
-                <!-- Segunda página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (4).png" alt="pagina 3">
-                <!-- Tercera página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (5).png" alt="pagina 4">
-                <!-- Cuarta página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (6).png" alt="pagina 5">
-                <!-- Quinta página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (7).png" alt="pagina 6">
-                <!-- Sexta página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (8).png" alt="pagina 7">
-                <!-- Séptima página del carrusel -->
-            </div>
-            <div class="foto">
-                <img src="/img/Sello Rojo/SelloRojo (9).png" alt="pagina 8">
-                <!-- Octava página del carrusel -->
-            </div>
-        </div>
+            <!-- Contenedor con la información detallada del proyecto -->
+            <div class="info-proyecto">
 
-        <div class="botones">
-            <!-- Contenedor para los botones de navegación del carrusel -->
-
-            <button id="anterior"><</button>
-            <!-- Botón para desplazarse a la imagen anterior -->
-
-             <button id="siguiente">></button>
-            <!-- Botón para desplazarse a la imagen siguiente -->
-        </div>
-
-        <ul class="puntos">
-            <!-- Indicadores de la posición actual en el carrusel -->
-
-            <li class="activo"></li>
-            <!-- Punto activo indica la posición actual -->
-
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-
-            <!-- Puntos adicionales corresponden a otras imágenes del carrusel -->
-        </ul>
-
-        <script src="/js/carrusel.js"></script>
-        <!-- Script JavaScript para agregar funcionalidad al carrusel -->
-    </section>
-
-    <!-- PROCESO -->
-    <section class="proceso">
-        <!-- Contenedor del nombre del proyecto -->
-        <div class="titulo-proceso">
-            <!-- Título -->
-            <h2>Proceso</h2>
-        </div>
-        <!-- Contenedor con la información detallada del proceso -->
-        <div class="info-proceso">
-            <!-- Breve descripción de los procesos -->
-            <div class="pasos-proceso">
-                <h4>Investigación y Análisis de la Marca</h4>
-                <p>El proceso comenzó con una inmersión profunda en la historia y los valores de Sello Rojo. Se realizó una investigación exhaustiva sobre su trayectoria en el mercado cafetero colombiano, analizando su posicionamiento, público objetivo y competidores. Este análisis permitió identificar los elementos clave que distinguen a la marca, como su compromiso con la calidad, la sostenibilidad y su conexión con la tradición cafetera. Estos insights sentaron las bases para crear un manual que reflejara su verdadera esencia.</p>
-            </div>
-
-            <div class="pasos-proceso">
-                <h4>Diseño de la Identidad Visual</h4>
-                <p>Una vez definidos los pilares de la marca, se procedió al desarrollo visual. El diseño se centró en la creación de directrices claras que aseguraran coherencia en cada aplicación de la identidad. Esto incluyó la actualización del logotipo, la elección de una paleta de colores cálida y vibrante que evocara la tradición cafetera, y la selección de tipografías modernas y legibles. Además, se establecieron lineamientos para el uso correcto de los elementos visuales en diferentes medios, tanto impresos como digitales, asegurando una representación consistente y profesional.
+                <p>Sello Rojo me confió la creación de su nuevo manual de identidad, un proyecto esencial para
+                    fortalecer su legado y asegurar una representación coherente en todos los puntos de contacto con su
+                    audiencia. Esta tarea se convirtió en una oportunidad para explorar y plasmar la esencia de la
+                    marca, garantizando que cada detalle refleje su autenticidad y compromiso.
                 </p>
+
+                <p>El enfoque principal fue elaborar un manual que encapsulara los valores fundamentales de Sello Rojo:
+                    calidad, sostenibilidad y tradición. Este documento no solo establece directrices visuales claras,
+                    sino que también refuerza su presencia en el mercado, destacándola como un símbolo de excelencia
+                    dentro de la rica tradición cafetera colombiana.</p>
+
+                <p>Este proyecto integral celebra la historia de Sello Rojo mientras impulsa su evolución. Desde el
+                    diseño hasta la implementación, cada elemento está diseñado para potenciar su impacto y consolidar
+                    su posición como un referente de confianza y calidad en la industria del café.</p>
+            </div>
+        </section>
+
+        <!-- CARRUSEL -->
+        <section class="contenedor-carrusel">
+            <!-- Contenedor principal del carrusel -->
+
+            <div class="lista">
+                <!-- Contenedor para las imágenes del carrusel -->
+
+                <div class="foto">
+                    <!-- Cada imagen individual dentro del carrusel -->
+                    <img src="./img/Sello Rojo/SelloRojo(1).png" alt="portada">
+                    <!-- Imagen de portada del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(2).png" alt="pagina 1">
+                    <!-- Primera página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(3).png" alt="pagina 2">
+                    <!-- Segunda página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(4).png" alt="pagina 3">
+                    <!-- Tercera página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(5).png" alt="pagina 4">
+                    <!-- Cuarta página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(6).png" alt="pagina 5">
+                    <!-- Quinta página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(7).png" alt="pagina 6">
+                    <!-- Sexta página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(8).png" alt="pagina 7">
+                    <!-- Séptima página del carrusel -->
+                </div>
+                <div class="foto">
+                    <img src="./img/Sello Rojo/SelloRojo(9).png" alt="pagina 8">
+                    <!-- Octava página del carrusel -->
+                </div>
             </div>
 
-            <div class="pasos-proceso">
-                <h4>Creación del Manual y Entrega Final</h4>
-                <p>El resultado final fue un manual de identidad visual detallado y funcional. Este documento abarcó desde la filosofía de la marca hasta aplicaciones prácticas como empaques, piezas publicitarias y contenido digital. Cada sección del manual fue diseñada para facilitar su implementación por cualquier equipo de diseño o marketing que trabaje con Sello Rojo. La entrega final incluyó una presentación al cliente, destacando cómo este manual consolidará su legado y fortalecerá su impacto en el mercado.</p>
+            <div class="botones">
+                <!-- Contenedor para los botones de navegación del carrusel -->
+
+                <button id="anterior">
+                    << /button>
+                        <!-- Botón para desplazarse a la imagen anterior -->
+
+                        <button id="siguiente">></button>
+                        <!-- Botón para desplazarse a la imagen siguiente -->
             </div>
-            
+
+            <ul class="puntos">
+                <!-- Indicadores de la posición actual en el carrusel -->
+
+                <li class="activo"></li>
+                <!-- Punto activo indica la posición actual -->
+
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+                <li></li>
+
+                <!-- Puntos adicionales corresponden a otras imágenes del carrusel -->
+            </ul>
+
+            <script src="/js/carrusel.js"></script>
+            <!-- Script JavaScript para agregar funcionalidad al carrusel -->
+        </section>
+
+        <!-- PROCESO -->
+        <section class="proceso">
+            <!-- Contenedor del nombre del proyecto -->
+            <div class="titulo-proceso">
+                <!-- Título -->
+                <h2>Proceso</h2>
+            </div>
+            <!-- Contenedor con la información detallada del proceso -->
+            <div class="info-proceso">
+                <!-- Breve descripción de los procesos -->
+                <div class="pasos-proceso">
+                    <h4>Investigación y Análisis de la Marca</h4>
+                    <p>El proceso comenzó con una inmersión profunda en la historia y los valores de Sello Rojo. Se
+                        realizó una investigación exhaustiva sobre su trayectoria en el mercado cafetero colombiano,
+                        analizando su posicionamiento, público objetivo y competidores. Este análisis permitió
+                        identificar los elementos clave que distinguen a la marca, como su compromiso con la calidad, la
+                        sostenibilidad y su conexión con la tradición cafetera. Estos insights sentaron las bases para
+                        crear un manual que reflejara su verdadera esencia.</p>
+                </div>
+
+                <div class="pasos-proceso">
+                    <h4>Diseño de la Identidad Visual</h4>
+                    <p>Una vez definidos los pilares de la marca, se procedió al desarrollo visual. El diseño se centró
+                        en la creación de directrices claras que aseguraran coherencia en cada aplicación de la
+                        identidad. Esto incluyó la actualización del logotipo, la elección de una paleta de colores
+                        cálida y vibrante que evocara la tradición cafetera, y la selección de tipografías modernas y
+                        legibles. Además, se establecieron lineamientos para el uso correcto de los elementos visuales
+                        en diferentes medios, tanto impresos como digitales, asegurando una representación consistente y
+                        profesional.
+                    </p>
+                </div>
+
+                <div class="pasos-proceso">
+                    <h4>Creación del Manual y Entrega Final</h4>
+                    <p>El resultado final fue un manual de identidad visual detallado y funcional. Este documento abarcó
+                        desde la filosofía de la marca hasta aplicaciones prácticas como empaques, piezas publicitarias
+                        y contenido digital. Cada sección del manual fue diseñada para facilitar su implementación por
+                        cualquier equipo de diseño o marketing que trabaje con Sello Rojo. La entrega final incluyó una
+                        presentación al cliente, destacando cómo este manual consolidará su legado y fortalecerá su
+                        impacto en el mercado.</p>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- Crearemos un botón que estará siempre en una esquina, este te permitirá volver arriba de la página -->
+
+        <div class="go-top-container">
+            <div class="go-top-button">
+                <i class="fas fa-chevron-up"></i>
+            </div>
         </div>
-    </section>
+        <script src="./js/botonarriba.js"></script>
 
+    </main>
+
+<!-- FOOTER -->
     <footer class="footer">
         <div class="contenido-footer">
             <div class="fila-footer">

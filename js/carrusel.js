@@ -1,3 +1,4 @@
+/* Carrusel de imágenes */
 let slider = document.querySelector('.contenedor-carrusel .lista');
 let items = document.querySelectorAll('.contenedor-carrusel .lista .foto');
 let next = document.getElementById('siguiente');

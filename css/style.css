@@ -1056,7 +1056,7 @@ header {
 /* SECCIÓN DE CONTACTO */
 
 /* Encabezado de la sección */
-.contacto{
+.contacto {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -1369,7 +1369,7 @@ textarea {
 }
 
 /* Botón volver Arriba */
- 
+
 .go-top-container {
     position: fixed;
     bottom: 4rem;
@@ -1378,7 +1378,7 @@ textarea {
     height: 4.4rem;
     z-index: -1;
 }
- 
+
 .go-top-button {
     width: 0rem;
     height: 0rem;
@@ -1392,7 +1392,7 @@ textarea {
     transform: translate(-50%, -50%);
     z-index: -1;
 }
- 
+
 .go-top-button i {
     position: absolute;
     font-size: 1.2rem;
@@ -1402,31 +1402,33 @@ textarea {
     color: #191919;
     transition: 0.2s;
 }
- 
+
 .show {
     z-index: 10;
 }
- 
+
 .show .go-top-button {
     animation: popup 0.3s ease-in-out;
     width: 4.4rem;
     height: 4.4rem;
     z-index: 11;
 }
- 
+
 .show i {
     transform: translate(-50%, -50%) scale(1);
 }
- 
+
 @keyframes popup {
     0% {
         width: 0;
         height: 0;
     }
+
     50% {
         width: 6rem;
         height: 6rem;
     }
+
     100% {
         width: 4.4rem;
         height: 4.4rem;
@@ -1441,6 +1443,7 @@ textarea {
         width: 3.5rem;
         height: 3.5rem;
     }
+
     .show .go-top-button {
         width: 3.5rem;
         height: 3.5rem;
@@ -1454,6 +1457,7 @@ textarea {
         width: 3rem;
         height: 3rem;
     }
+
     .show .go-top-button {
         width: 3rem;
         height: 3rem;
@@ -1467,114 +1471,147 @@ textarea {
 .accordion .content {
     display: flex;
     flex-direction: column;
-    gap: 24px; /* Espaciado entre los elementos dentro del acordeón */
+    gap: 24px;
+    /* Espaciado entre los elementos dentro del acordeón */
 }
 
 /* Título de la sección de experiencia */
 .accordion h2 {
-    font-size: 56px; /* Tamaño grande para el título */
-    padding-bottom: 32px; /* Espaciado inferior */
+    font-size: 56px;
+    /* Tamaño grande para el título */
+    padding-bottom: 32px;
+    /* Espaciado inferior */
 }
 
 /* Acordeón en sí mismo */
 .accordion {
-    width: 1440px; /* Ancho fijo */
-    margin: 90px auto; /* Centramos el acordeón y damos margen superior */
-    color: whitesmoke; /* Color de texto */
+    width: 1440px;
+    /* Ancho fijo */
+    margin: 90px auto;
+    /* Centramos el acordeón y damos margen superior */
+    color: whitesmoke;
+    /* Color de texto */
 }
 
 /* Estilo del contenedor de cada elemento de experiencia */
 .accordion .container {
-    position: relative; /* Necesario para la posición de los elementos hijos */
+    position: relative;
+    /* Necesario para la posición de los elementos hijos */
 }
 
 /* Estilo para las etiquetas de los puestos de trabajo */
 .accordion .label {
     position: relative;
-    padding: 16px 0; /* Espaciado superior e inferior */
-    font-size: 32px; /* Tamaño grande */
+    padding: 16px 0;
+    /* Espaciado superior e inferior */
+    font-size: 32px;
+    /* Tamaño grande */
     color: white;
-    cursor: pointer; /* Hace que el cursor cambie al pasar por encima */
+    cursor: pointer;
+    /* Hace que el cursor cambie al pasar por encima */
 }
 
 /* Flecha al lado de la etiqueta (expandir/colapsar) */
 .accordion .label::before {
-    content: '+'; /* Inicialmente un signo de más */
+    content: '+';
+    /* Inicialmente un signo de más */
     color: whitesmoke;
     position: absolute;
     top: 50%;
-    right: -5px; /* Ubicación de la flecha */
+    right: -5px;
+    /* Ubicación de la flecha */
     font-size: 30px;
-    transform: translateY(-50%); /* Centrado vertical */
+    transform: translateY(-50%);
+    /* Centrado vertical */
 }
 
 /* Estilo del contenido dentro de cada acordeón */
 .accordion .content {
     position: relative;
-    height: 0; /* Oculto inicialmente */
+    height: 0;
+    /* Oculto inicialmente */
     font-size: 20px;
-    text-align: justify; /* Justifica el texto */
-    width: 100%; /* Ocupa todo el ancho disponible */
-    overflow: hidden; /* Oculta el contenido que excede la altura */
-    transition: 0.5s; /* Transición suave al expandir */
+    text-align: justify;
+    /* Justifica el texto */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
+    overflow: hidden;
+    /* Oculta el contenido que excede la altura */
+    transition: 0.5s;
+    /* Transición suave al expandir */
 }
 
 /* Línea separadora */
 .accordion hr {
-    width: 100%; /* 100% de ancho */
-    margin-left: 0; /* Elimina margen izquierdo */
-    border: 1px solid grey; /* Borde gris */
+    width: 100%;
+    /* 100% de ancho */
+    margin-left: 0;
+    /* Elimina margen izquierdo */
+    border: 1px solid grey;
+    /* Borde gris */
 }
 
 /* Expande el contenido cuando el acordeón está activo */
 .accordion .container.active .content {
-    height: 95vh; /* Define la altura cuando se expande */
+    height: 600px;
+    /* Define la altura cuando se expande */
 }
 
 /* Cambia la flecha de '+' a '-' cuando el acordeón está abierto */
 .accordion .container.active .label::before {
-    content: '-'; /* Ahora es un signo de menos */
+    content: '-';
+    /* Ahora es un signo de menos */
     font-size: 30px;
 }
 
 /* Estilo para la fecha */
 .accordion .container .fecha {
-    font-size: 16px; /* Tamaño de fuente de la fecha */
-    color: #f9ca34; /* Color dorado */
+    font-size: 16px;
+    /* Tamaño de fuente de la fecha */
+    color: #f9ca34;
+    /* Color dorado */
 }
 
 /* Descripción del puesto de trabajo */
 .accordion .container .descripcion {
-    font-size: 18px; /* Tamaño de fuente de la descripción */
+    font-size: 18px;
+    /* Tamaño de fuente de la descripción */
 }
 
 /* Proyectos clave dentro de cada experiencia */
 .accordion .container .proyectosclave {
     display: flex;
     flex-direction: column;
-    gap: 8px; /* Espaciado entre proyectos */
+    gap: 8px;
+    /* Espaciado entre proyectos */
 }
 
 /* Título de los proyectos clave */
 .accordion .container .proyectosclave h5 {
-    font-size: 20px; /* Tamaño de fuente para los títulos de proyectos */
-    color: #f9ca34; /* Color dorado */
+    font-size: 20px;
+    /* Tamaño de fuente para los títulos de proyectos */
+    color: #f9ca34;
+    /* Color dorado */
 }
 
 /* Estilo para las listas de proyectos clave */
 .accordion .container .proyectosclave ul {
-    font-size: 18px; /* Tamaño de fuente de las listas de proyectos */
+    font-size: 18px;
+    /* Tamaño de fuente de las listas de proyectos */
 }
 
 /* Habilidades dentro de la experiencia */
 .accordion .container .habilidades h5 {
-    font-size: 20px; /* Tamaño de fuente de habilidades */
-    color: #f9ca34; /* Color dorado */
+    font-size: 20px;
+    /* Tamaño de fuente de habilidades */
+    color: #f9ca34;
+    /* Color dorado */
 }
 
 /* Estilo para las listas de habilidades */
 .accordion .container .habilidades ul {
-    font-size: 18px; /* Tamaño de fuente de las listas */
+    font-size: 18px;
+    /* Tamaño de fuente de las listas */
 }
 
 
@@ -1582,121 +1619,167 @@ textarea {
 /* Para dispositivos pequeños (máximo 375px) */
 @media (max-width: 375px) {
     .accordion {
-        width: 100%; /* El acordeón ocupa todo el ancho */
-        margin: 10px 0 0 0; /* Menos margen */
-        padding: 24px; /* Padding más pequeño */
+        width: 100%;
+        /* El acordeón ocupa todo el ancho */
+        margin: 10px 0 0 0;
+        /* Menos margen */
+        padding: 24px;
+        /* Padding más pequeño */
     }
 
     .accordion h2 {
-        font-size: 24px; /* Reduce el tamaño del título */
-        padding-bottom: 16px; /* Menos espacio debajo */
+        font-size: 24px;
+        /* Reduce el tamaño del título */
+        padding-bottom: 16px;
+        /* Menos espacio debajo */
     }
 
     .accordion .label {
-        font-size: 20px; /* Tamaño más pequeño para las etiquetas */
+        font-size: 20px;
+        /* Tamaño más pequeño para las etiquetas */
     }
 
     .accordion .label::before {
-        font-size: 18px; /* Flecha más pequeña */
-        right: 0; /* Ajusta la posición de la flecha */
+        font-size: 18px;
+        /* Flecha más pequeña */
+        right: 0;
+        /* Ajusta la posición de la flecha */
     }
 
     .accordion .content {
-        font-size: 14px; /* Reduce el tamaño del contenido */
+        font-size: 14px;
+        /* Reduce el tamaño del contenido */
     }
 
     .accordion .container .proyectosclave h5,
     .accordion .container .habilidades h5 {
-        font-size: 16px; /* Títulos más pequeños */
+        font-size: 16px;
+        /* Títulos más pequeños */
     }
 
     .accordion .container .proyectosclave ul,
     .accordion .container .habilidades ul {
-        font-size: 14px; /* Reduce el tamaño de las listas */
+        font-size: 14px;
+        /* Reduce el tamaño de las listas */
     }
 
     .accordion .container .fecha {
-        font-size: 12px; /* Ajusta el tamaño de la fecha */
+        font-size: 12px;
+        /* Ajusta el tamaño de la fecha */
+    }
+
+    /* Expande el contenido cuando el acordeón está activo */
+    .accordion .container.active .content {
+        height: 950px;
+        /* Define la altura cuando se expande */
     }
 }
 
 /* Para dispositivos medianos (máximo 768px) */
 @media (max-width: 768px) {
     .accordion {
-        width: 100%; /* El acordeón ocupa todo el ancho */
-        margin: 20px auto; /* Margen más pequeño */
-        padding: 10px; /* Padding más pequeño */
+        width: 100%;
+        /* El acordeón ocupa todo el ancho */
+        margin: 20px auto;
+        /* Margen más pequeño */
+        padding: 10px;
+        /* Padding más pequeño */
     }
 
     .accordion h2 {
-        font-size: 32px; /* Tamaño de título moderado */
-        padding-bottom: 16px; /* Menos espacio debajo */
+        font-size: 32px;
+        /* Tamaño de título moderado */
+        padding-bottom: 16px;
+        /* Menos espacio debajo */
     }
 
     .accordion .label {
-        font-size: 24px; /* Tamaño adecuado para las etiquetas */
+        font-size: 24px;
+        /* Tamaño adecuado para las etiquetas */
     }
 
     .accordion .label::before {
-        font-size: 22px; /* Ajusta el tamaño de la flecha */
+        font-size: 22px;
+        /* Ajusta el tamaño de la flecha */
     }
 
     .accordion .content {
-        font-size: 16px; /* Tamaño de contenido más pequeño */
+        font-size: 16px;
+        /* Tamaño de contenido más pequeño */
     }
 
     .accordion .container .proyectosclave h5,
     .accordion .container .habilidades h5 {
-        font-size: 18px; /* Tamaño moderado para los títulos */
+        font-size: 18px;
+        /* Tamaño moderado para los títulos */
     }
 
     .accordion .container .proyectosclave ul,
     .accordion .container .habilidades ul {
-        font-size: 16px; /* Listas con tamaño ajustado */
+        font-size: 16px;
+        /* Listas con tamaño ajustado */
     }
 
     .accordion .container .fecha {
-        font-size: 14px; /* Fecha ajustada */
+        font-size: 14px;
+        /* Fecha ajustada */
+    }
+
+    /* Expande el contenido cuando el acordeón está activo */
+    .accordion .container.active .content {
+        height: 950px;
+        /* Define la altura cuando se expande */
     }
 }
 
 /* Para dispositivos más grandes (máximo 1024px) */
 @media (max-width: 1024px) {
     .accordion {
-        width: 100%; /* El acordeón ocupa todo el ancho */
-        margin: 40px auto; /* Margen mayor en la parte superior */
-        padding: 16px; /* Ajusta el padding */
+        width: 100%;
+        /* El acordeón ocupa todo el ancho */
+        margin: 40px auto;
+        /* Margen mayor en la parte superior */
+        padding: 16px;
+        /* Ajusta el padding */
     }
 
 
     .accordion h2 {
-        font-size: 40px; /* Tamaño de título grande pero no demasiado */
-        padding-bottom: 20px; /* Menos espacio debajo */
+        font-size: 40px;
+        /* Tamaño de título grande pero no demasiado */
+        padding-bottom: 20px;
+        /* Menos espacio debajo */
     }
 
     .accordion .label {
-        font-size: 28px; /* Etiquetas un poco más grandes */
+        font-size: 28px;
+        /* Etiquetas un poco más grandes */
     }
 
     .accordion .label::before {
-        font-size: 25px; /* Flecha más visible */
+        font-size: 25px;
+        /* Flecha más visible */
     }
 
     .accordion .content {
-        font-size: 18px; /* Aumenta un poco el tamaño del contenido */
+        font-size: 18px;
+        /* Aumenta un poco el tamaño del contenido */
     }
 
     .accordion .container .proyectosclave h5,
     .accordion .container .habilidades h5 {
-        font-size: 20px; /* Títulos más grandes */
+        font-size: 20px;
+        /* Títulos más grandes */
     }
 
     .accordion .container .proyectosclave ul,
     .accordion .container .habilidades ul {
-        font-size: 18px; /* Listas con tamaño más grande */
+        font-size: 18px;
+        /* Listas con tamaño más grande */
     }
 
     .accordion .container .fecha {
-        font-size: 16px; /* Fecha más visible */
+        font-size: 16px;
+        /* Fecha más visible */
     }
 }

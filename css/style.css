@@ -1528,7 +1528,7 @@ textarea {
 
 /* Expande el contenido cuando el acordeón está activo */
 .accordion .container.active .content {
-    height: 90vh; /* Define la altura cuando se expande */
+    height: 95vh; /* Define la altura cuando se expande */
 }
 
 /* Cambia la flecha de '+' a '-' cuando el acordeón está abierto */

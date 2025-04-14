@@ -1369,55 +1369,56 @@ textarea {
 }
 
 /* Botón volver Arriba */
-
 .go-top-container {
-    position: fixed;
-    bottom: 4rem;
-    right: 4rem;
-    width: 4.4rem;
-    height: 4.4rem;
-    z-index: -1;
+    position: fixed; /* El contenedor se mantiene fijo en la pantalla, sin importar el scroll */
+    bottom: 4rem; /* Separado 4rem del borde inferior */
+    right: 4rem; /* Separado 4rem del borde derecho */
+    width: 4.4rem; /* Tamaño del contenedor: ancho */
+    height: 4.4rem; /* Tamaño del contenedor: alto */
+    z-index: -1; /* Por defecto está detrás del contenido, se muestra al añadir la clase .show */
 }
 
 .go-top-button {
-    width: 0rem;
-    height: 0rem;
-    background: whitesmoke;
-    border-radius: 50%;
-    cursor: pointer;
-    transition: 0.2s;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
+    width: 0rem; /* Oculto inicialmente (sin ancho) */
+    height: 0rem; /* Oculto inicialmente (sin alto) */
+    background: whitesmoke; /* Fondo blanco humo */
+    border-radius: 50%; /* Forma circular */
+    cursor: pointer; /* Cursor de mano al pasar por encima */
+    transition: 0.2s; /* Transición suave en los cambios */
+    position: absolute; /* Posición absoluta respecto al contenedor */
+    top: 50%; /* Centrado verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste para que quede perfectamente centrado */
+    z-index: -1; /* Oculto debajo del contenido */
 }
 
 .go-top-button i {
-    position: absolute;
-    font-size: 1.2rem;
-    top: 48%;
-    left: 50%;
-    transform: translate(-50%, -50%) scale(0);
-    color: #191919;
-    transition: 0.2s;
+    position: absolute; /* Posicionamiento absoluto dentro del botón */
+    font-size: 1.2rem; /* Tamaño del ícono */
+    top: 48%; /* Centrado casi perfecto verticalmente */
+    left: 50%; /* Centrado horizontalmente */
+    transform: translate(-50%, -50%) scale(0); /* Centrado y escalado a 0 (invisible) */
+    color: #191919; /* Color del ícono */
+    transition: 0.2s; /* Transición para cuando se muestre */
 }
 
+/* Clase que se añade cuando el botón debe mostrarse */
 .show {
-    z-index: 10;
+    z-index: 10; /* Pasa a estar por encima del contenido */
 }
 
 .show .go-top-button {
-    animation: popup 0.3s ease-in-out;
-    width: 4.4rem;
-    height: 4.4rem;
-    z-index: 11;
+    animation: popup 0.3s ease-in-out; /* Animación al aparecer */
+    width: 4.4rem; /* Tamaño visible */
+    height: 4.4rem; /* Tamaño visible */
+    z-index: 11; /* Asegura que esté en la capa superior */
 }
 
 .show i {
-    transform: translate(-50%, -50%) scale(1);
+    transform: translate(-50%, -50%) scale(1); /* Muestra el ícono escalándolo a su tamaño normal */
 }
 
+/* Animación de aparición con efecto rebote */
 @keyframes popup {
     0% {
         width: 0;
@@ -1435,12 +1436,12 @@ textarea {
     }
 }
 
-/* Media Queries Botón */
+/* Media Queries Botón: Ajustes para pantallas medianas */
 @media (max-width: 768px) {
     .go-top-container {
-        bottom: 2rem;
-        right: 2rem;
-        width: 3.5rem;
+        bottom: 2rem; /* Más cerca del borde inferior */
+        right: 2rem; /* Más cerca del borde derecho */
+        width: 3.5rem; /* Tamaño reducido */
         height: 3.5rem;
     }
 
@@ -1450,11 +1451,12 @@ textarea {
     }
 }
 
+/* Media Queries Botón: Ajustes para pantallas pequeñas */
 @media (max-width: 480px) {
     .go-top-container {
-        bottom: 1.5rem;
-        right: 1.5rem;
-        width: 3rem;
+        bottom: 1.5rem; /* Aún más cerca del borde inferior */
+        right: 1.5rem; /* Aún más cerca del borde derecho */
+        width: 3rem; /* Tamaño más pequeño para móviles */
         height: 3rem;
     }
 
@@ -1463,6 +1465,7 @@ textarea {
         height: 3rem;
     }
 }
+
 
 
 /* SECCIÓN EXPERIENCIA */
